@@ -1,0 +1,14 @@
+mybatis:
+  type-aliases-package: com.example.demo.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true #Spring boot下，mybatis配置驼峰命名法和下划线风格转换
+
+
+spring:
+  datasource:
+      url: jdbc:mysql://localhost:3306/test
+      username: root
+      password: czy1212
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
