@@ -2,7 +2,7 @@ package com.example.demo.entity;
 
 public class User {
 
-    private int id;
+    private String id;
     private String userName;
     private String nickName;
     private String passWord;
@@ -11,7 +11,7 @@ public class User {
     public User() {
     }
 
-    public User(int id, String userName, String nickName, String passWord, String userSex) {
+    public User(String id, String userName, String nickName, String passWord, String userSex) {
         this.id = id;
         this.userName = userName;
         this.nickName = nickName;
@@ -19,11 +19,11 @@ public class User {
         this.userSex = userSex;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

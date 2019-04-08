@@ -3,12 +3,11 @@ package com.example.demo.controller;
 import com.example.demo.Result.ServerResult;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserInfoService;
-import javafx.geometry.Pos;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -18,6 +17,28 @@ public class UserInfoController {
 
     @Resource
     private UserInfoService userInfoService;
+
+    @RequestMapping(value = "/home")
+    public String home(Model model){
+
+        List<User> users = userInfoService.getAllUsers();
+
+        model.addAttribute("users", users);
+
+        return "home";
+    }
+
+    @RequestMapping(value = "/add")
+    public String addUser(){
+
+        return "add";
+    }
+
+    @RequestMapping(value = "/update")
+    public String updateUser(){
+
+        return "update";
+    }
 
     @ResponseBody
     @RequestMapping(value = "/allUsers")

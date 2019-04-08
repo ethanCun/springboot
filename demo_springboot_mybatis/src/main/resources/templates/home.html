@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--注意引入xmls:th消除页面错误 同时，使用link script引入会有提示-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}"
+          href="../static/asserts/css/bootstrap.min.css">
+    <script th:src="@{/webjars/jquery/3.3.0/jquery.min.js}"></script>
+</head>
+<body>
+
+<a href="/add">新增用户</a>
+<input name="id" type="text" placeholder="id" id="userId">
+<a href="javascript:deleteUserWithId()">删除该id对应的用户信息</a>
+<p></p>
+
+<script>
+
+    function deleteUserWithId() {
+
+        var id = $("#userId").val();
+        $.ajax({
+
+            url:'http://localhost:8080/deleteUserWithId',
+            type:'post',
+            data:{id:id},
+            success:function (data) {
+
+                alert("data = " + JSON.stringify(data));
+
+                window.location.reload();
+
+            },
+            error:function (error) {
+                alert("error = " + error);
+
+                window.location.reload()
+            }
+        })
+    }
+</script>
+
+<table border="1px">
+
+    <tr>
+        <th>id</th>
+        <th>userName</th>
+        <th>nickName</th>
+        <th>userSex</th>
+        <th>passWord</th>
+    </tr>
+
+    <tr th:each="user : ${users}">
+
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.nickName}"></td>
+        <td th:text="${user.userSex}"></td>
+        <td th:text="${user.passWord}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
