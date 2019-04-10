@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springboot.demo.dao.UserDao">
+
+    <resultMap id="saveUser" type="User">
+        <id property="id" column="id"></id>
+        <result property="createDate" column="create_date"></result>
+        <result property="updateDate" column="update_date"></result>
+        <result property="name" column="name"></result>
+        <result property="age" column="age"></result>
+    </resultMap>
+
+    <select id="findAll" resultMap="saveUser">
+        select * from user
+    </select>
+
+    <select id="findById" parameterType="int" resultType="User">
+        select  * from user where id=#{id}
+    </select>
+
+    <delete id="deleteUserById" parameterType="int">
+        delete from user where id=#{id}
+    </delete>
+
+    <insert id="save" parameterType="User">
+        insert into user (create_date, update_date, name, age)
+         values (#{createDate}, #{updateDate}, #{name}, #{age})
+    </insert>
+
+</mapper>
