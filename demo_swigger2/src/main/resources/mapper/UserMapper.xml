@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.swigger2.demo.dao.UserDao">
+
+
+    <select id="fetchAllUser" resultType="User">
+        select * from `user`
+    </select>
+
+    <select id="getUserWithId" parameterType="int" resultType="User">
+        select * from `user` where id=#{id}
+    </select>
+
+    <insert id="insertUser" parameterType="User">
+        insert into `user` (name, age, create_date, update_date) values
+         (#{name}, #{age}, #{createDate}, #{updateDate})
+    </insert>
+
+    <delete id="deleteUserWithId" parameterType="int">
+        delete from `user` where id=#{id}
+    </delete>
+
+    <update id="updateUser" parameterType="User">
+        update `user` set name=#{name}, age=#{age}, create_date=#{createDate},
+        update_date=#{updateDate} where id=#{id}
+    </update>
+
+</mapper>
