@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis_generator
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: czy1212
+    type: com.alibaba.druid.pool.DruidDataSource
+  devtools:
+    restart:
+      #开启热部署 热加载
+      enabled: true
+      #热部署位置
+      additional-paths: src/main/java
+  thymeleaf:
+      #关闭thymeleaf的缓存
+    cache: false
+
+
+mybatis:
+  type-aliases-package: com.example.demo.entity
+  #关闭mapper-locations测试注解形式
+  mapper-locations: classpath:mappers/*.xml
+
+
