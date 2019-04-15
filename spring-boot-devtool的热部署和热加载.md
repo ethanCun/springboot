@@ -152,7 +152,7 @@ IDEA配置
 
 
 
-（2）ctrl + shift + alt + /,选择Registry,勾上 Compiler autoMake allow when app running
+（2）ctrl/command  + shift + alt + /,选择Registry,勾上 Compiler autoMake allow when app running
 
 
 
