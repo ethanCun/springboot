@@ -23,6 +23,7 @@ spring:
        cache: false
        mode: LEGACYHTML5
 
+
     devtools:
       restart:
         enabled: true #开启热部署
