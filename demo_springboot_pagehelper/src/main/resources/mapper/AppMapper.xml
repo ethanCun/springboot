@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.AppDao">
+
+    <!--
+        都表示从1开始后面100条
+        select * from `t_app` limit 100 offset 1
+-->
+    <select id="getAppList" resultType="App">
+
+        select  * from `t_app`
+    </select>
+</mapper>
