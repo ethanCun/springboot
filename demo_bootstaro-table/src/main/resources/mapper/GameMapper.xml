@@ -4,7 +4,20 @@
 <mapper namespace="com.example.demo.dao.GameDao">
 
     <!--sql语句后面别带分号；-->
+    <!--<select id="findAll" resultType="Game" parameterType="Page">-->
+
+        <!--select * from `game`-->
+
+        <!--<if test="sort != null and sort != ''">-->
+
+           <!--order by #{sort} #{sortOrder}-->
+        <!--</if>-->
+
+    <!--</select>-->
+
     <select id="findAll" resultType="Game">
+
         select * from `game`
+
     </select>
 </mapper>

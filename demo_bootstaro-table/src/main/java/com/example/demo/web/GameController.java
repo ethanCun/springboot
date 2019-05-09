@@ -28,7 +28,10 @@ public class GameController {
     @RequestMapping(value = "/findAllGames", method = RequestMethod.GET)
     public Map<String, Object> findAllGames(Page page, Game game){
 
-        Map<String, Object> map = gameService.findAll(page.getPage(), page.getRows());
+        System.out.println("page = " + page);
+        System.out.println("game = " + game);
+
+        Map<String, Object> map = gameService.findAll(page, game);
 
         System.out.println("map = " + map);
 

@@ -10,19 +10,34 @@ $(function () {
         striped:'true', //是否显示行间隔色
         cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
         uniqueId: 'ID',
-        pagination: true, //分页
+
+        //排序
         sortable: true,
         sortOrder: "asc", //排序方式 asc升序  desc降序
+
+        //开启分页
+        pagination: true, //分页
         sidePagination : 'server', //服务器端分页
+
         pageNumber:1,
         pageSize:5,
         pageList:[5, 10, 20, 25],
-        search: false,                      //是否显示表格搜索
-        strictSearch: true,
+
+        //开启查询
+        search: true,     //是否显示表格搜索
+        showRefresh: true, //是否显示刷新按钮
+        searchAlign:"right", //搜索框靠左对齐
+        strictSearch: false, //关闭严格查询
+        searchOnEnterKey:false, //回车开始查询
+
         showColumns: false,                  //是否显示所有的列（选择显示的列）
-        showRefresh: true,                  //是否显示刷新按钮
         minimumCountColumns: 2,             //最少允许的列数
-        clickToSelect: true,                //是否启用点击选中行
+
+        //关闭单击选中
+        singleSelect:false,
+        clickToSelect: false,                //是否启用点击选中行
+        maintainSelected:false, //分页仍然选中
+
         showToggle: true,                   //是否显示详细视图和列表视图的切换按钮
         cardView: false,                    //是否显示详细视图
         detailView: false,                  //是否显示父子表
@@ -128,16 +143,34 @@ $(function () {
         var id = value;
         var result = "";
 
-        result += "<a href='javascript:;' class='btn btn-xs green' onclick='' title='查看'>" +
+        result += "<a href='javascript:;' class='btn btn-xs green' onclick='seeDetail()' title='查看'>" +
             " <span class='glyphicon glyphicon-search'></span></a>";
-        result += "<a href='javascript:;' class='btn btn-xs blue' onclick='' title='编辑'>" +
+        result += "<a href='javascript:;' class='btn btn-xs blue' onclick='edit()' title='编辑'>" +
             "<span class='glyphicon glyphicon-pencil'></span></a>";
-        result += "<a href='javascript:;' class='btn btn-xs red' onclick='' title='删除'>" +
+        result += "<a href='javascript:;' class='btn btn-xs red' onclick='deleteAction()' title='删除'>" +
             "<span class='glyphicon glyphicon-remove'></span></a>"
 
         return result;
+    };
+
+    //查看
+    function seeDetail() {
+
+        console.log("查看");
     }
-})
+
+    //编辑
+    function edit() {
+
+        console.log("编辑");
+    }
+
+    //删除
+    function deleteAction() {
+
+        console.log("删除");
+    }
+});
 
 $(document).ready(function () {
 

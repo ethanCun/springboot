@@ -21,7 +21,9 @@ public class DemoApplication extends WebMvcConfigurationSupport {
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
 
+        //表示在磁盘static目录下的所有资源会被解析为以下的路径 classpath:/static/  http://localhost:8080/static/img/test.png
         registry.addResourceHandler("/static/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX + "/static/");
+
         super.addResourceHandlers(registry);
     }
 }
