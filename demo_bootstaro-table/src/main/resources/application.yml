@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bootstrap-table
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: czy1212
+  thymeleaf:
+    cache: false
+
+mybatis:
+  type-aliases-package: com.example.demo.domain
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+
+
