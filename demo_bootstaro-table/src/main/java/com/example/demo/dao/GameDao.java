@@ -9,8 +9,6 @@ import java.util.List;
 @Component
 public interface GameDao {
 
-    List<Game> findAll(Page page);
-
     List<Game> findAll();
 
 }

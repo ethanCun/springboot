@@ -23,14 +23,13 @@ public class GameServiceImp implements GameService {
     @Override
     public Map<String, Object> findAll(Page page, Game game) {
 
-//        PageHelper.startPage(page.getPage(), page.getRows());
-
         //设置分页并根据sort和sortOrder排序
         if (page.getSort() == null || page.getSort().equals("")){
 
             PageHelper.startPage(page.getPage(), page.getRows());
         }else {
 
+            //NameUtils.humpToLine2(page.getSort()): 驼峰转下划线
             PageHelper.startPage(page.getPage(), page.getRows(), NameUtils.humpToLine2(page.getSort()) + " " + page.getSortOrder());
         }
 

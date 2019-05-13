@@ -5,6 +5,10 @@ import java.util.regex.Pattern;
 
 public class NameUtils {
 
+    //\w
+    //匹配包括下划线的任何单词字符。类似但不等价于“[A-Za-z0-9_]”，这里的"单词"字符使用Unicode字符集。
+    //\W
+    //匹配任何非单词字符。等价于“[^A-Za-z0-9_]”。
     private static Pattern linePattern = Pattern.compile("_(\\w)");
 
     /** 下划线转驼峰 */
@@ -24,10 +28,12 @@ public class NameUtils {
         return str.replaceAll("[A-Z]", "_$0").toLowerCase();
     }
 
+    //[A-Z] 表示匹配 26 个大写字母中的任意一个
     private static Pattern humpPattern = Pattern.compile("[A-Z]");
 
     /** 驼峰转下划线,效率比上面高 */
     public static String humpToLine2(String str) {
+
         Matcher matcher = humpPattern.matcher(str);
         StringBuffer sb = new StringBuffer();
         while (matcher.find()) {

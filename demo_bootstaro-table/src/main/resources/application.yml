@@ -14,6 +14,22 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #配置mybatis打印sql
   mapper-locations: classpath:mapper/*.xml
 
+# 配置https 1.使用jdk自带的 keytools 创建证书
+# keytool -genkey -alias tomcat -keyalg RSA -keystore /home/gzr/tomcat.keystore
+# -alias后面是别名 -keyalg后面是签名方式 -keystore后面是路径
+# 443为https访问默认端口 设置为443访问链接的时候可以不加
+server:
+  port: 8443
+  ssl:
+    key-store: /Users/cunethan/Desktop/tomcat.keystore
+    key-store-password: czy1212
+    key-store-type: JKS
+    key-alias: tomcat
+    enabled: true
+
+
+
+
 
 
 
