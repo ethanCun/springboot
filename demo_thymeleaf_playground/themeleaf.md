@@ -84,6 +84,7 @@ last:布尔值，当前循环是否是最后一个
 <!--th:onclick-->
 <p th:text="'th:onclick'"></p>
 <p th:onclick="testOnclick()" th:text="onclick"></p>
+<script th:src="@{/js/onclick.js}"></script>
 
 <p class="testP" th:text="'th:onclick测试p标签'"></p>
 
