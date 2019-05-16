@@ -1,0 +1,7 @@
+configure:
+  czy:
+   offset: 11
+   age: 10
+   name: czy
+   animal:
+     name: ccccccc
