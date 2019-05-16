@@ -91,6 +91,28 @@ public class TestConfiguration {
 }
 ```
 
+#### @Component 与 @ComponentScan
+```
+1. 使用@Component或@Service或@Repository定义bean
+2.使用@CompoentScan扫描指定的包
+
+对Spring Boot项目：
+1. 如果你的其他包都在使用了@SpringBootApplication注解的main
+app所在的包及其下级包，则你什么都不用做，SpringBoot会自动帮你把其他包都扫描了
+2.如果你有一些bean所在的包，不在main
+app的包及其下级包，那么你需要手动加上@ComponentScan注解并指定那个bean所在的包
+
+定义@CoponentScan(“com.demo”)
+定义分别扫描两个包
+@ComponentScan({“com.demo.springboot”,”com.demo.somethingelse”})
+
+3.如果仅仅只写@ComponentScan({"com.demo.somethingelse"})将导致com.demo.springboot包下的类无法被扫描到（框架原始的默认扫描效果无效了）
+
+对非Springboot项目，@ComponentScan(basePackages = {"com.demo.package1", "com.demo.package2"})相当于：
+<context:component-scan base-package="com.demo.package1, com.demo.package2"/>
+
+```
+
 
 #### @EnableConfigurationProperties({PropertiesConfig.class})
 ```
