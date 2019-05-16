@@ -371,4 +371,52 @@ test2 = http-nio-8080-exec-1 d4696aad-b7ec-4f85-9c09-84291bccf542
 
 ```
 
+#### @AliasFor
+```
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@Documented
+public @interface AliasFor {
+
+	@AliasFor("attribute")
+	String value() default "";
+
+	@AliasFor("value")
+	String attribute() default "";
+
+	Class<? extends Annotation> annotation() default Annotation.class;
+}
+
+1. 在同一个注解内，对两个不同的属性一起使用，互为别名，比如@RequestMapping中path和value成对使用，互为别名。
+
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Mapping
+public @interface RequestMapping {
+    String name() default "";
+
+    @AliasFor("path") // 此时path和value值是一样的，如果不一样会报错
+    String[] value() default {};
+
+    @AliasFor("value") // 此时path和value值是一样的，如果不一样会报错
+    String[] path() default {};
+    ... 
+}
+
+
+2. 为其它注解别名
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Configuration
+public @interface czyconfigure {
+
+    //attribute和value都指定时， 两者必须一致
+    @AliasFor(value="value", annotation = Configuration.class)
+    String value() default "";
+}
+
+```
+
 #### TODO: @EnableScheduling, @EnableTransactionManagement, @EnableAspectJAutoProxy, @EnableWebMvc, @PostConstruct, @service static类注入失败
