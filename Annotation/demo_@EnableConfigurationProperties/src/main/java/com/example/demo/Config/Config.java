@@ -1,6 +1,7 @@
 package com.example.demo.Config;
 
 import com.example.demo.entity.Animal;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
