@@ -214,7 +214,8 @@ configure:
  * ，如果该值为空，则返回false;如果值不为空，则将该值与havingValue指定的值进行比较，
  * 如果一样则返回true;否则返回false。如果返回值为false，则该configuration不生效；为true则生效。
  * */
-@ConditionalOnProperty(name = "configure.czy.name", havingValue = "czy2")
+//@ConditionalOnProperty(name = "configure.czy.name", havingValue = "czy2")
+@ConditionalOnProperty(prefix = "configure.czy", value = "name", havingValue = "czy")
 @Configuration
 public class TestBean {
 
@@ -235,4 +236,139 @@ configure:
 
 ```
 
-#### TODO:@EnableAsync, @EnableScheduling, @EnableTransactionManagement, @EnableAspectJAutoProxy, @EnableWebMvc。
+#### @EnableAsync @Async
+```
+我们在使用多线程的时候，往往需要创建Thread类，或者实现Runnable接口，如果要使用到线程池，我们还需要来创建
+Executors，在使用spring中，已经给我们做了很好的支持。只要要@EnableAsync就可以使用多线程。使用@Async就可以
+定义一个线程任务。通过spring给我们提供的ThreadPoolTaskExecutor就可以使用线程池。下面举个例子来说明
+
+@EnableAsync  // 启用异步任务
+@Async    // 这里进行标注为异步任务，在执行此方法的时候，会单独开启线程来执行 
+```
+###### 例子:
+```
+配置线程池:
+
+package com.example.demo.Config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.AsyncConfigurerSupport;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+
+import java.util.concurrent.Executor;
+
+@Configuration
+@ComponentScan(basePackages = "com.example.demo.Service")
+@EnableAsync //启用异步任务
+public class ThreadConfig extends AsyncConfigurerSupport {
+
+    //执行需要依赖线程池，重写AsyncConfigurerSupport配置线程池
+    @Override
+    public Executor getAsyncExecutor() {
+
+        ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
+        threadPoolTaskExecutor.setCorePoolSize(5);
+        threadPoolTaskExecutor.setMaxPoolSize(10);
+        threadPoolTaskExecutor.setQueueCapacity(12);
+
+        threadPoolTaskExecutor.initialize();
+
+        return threadPoolTaskExecutor;
+    }
+
+    // 执行需要依赖线程池，这里就来配置一个线程池
+//    @Bean
+//    public Executor executor(){
+//
+//        ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
+//        threadPoolTaskExecutor.setCorePoolSize(5);
+//        threadPoolTaskExecutor.setMaxPoolSize(10);
+//        threadPoolTaskExecutor.setQueueCapacity(12);
+//
+//        threadPoolTaskExecutor.initialize();
+//
+//        return threadPoolTaskExecutor;
+//    }
+
+}
+
+
+Service:
+@Service(value = "asyncTaskService")
+public class AsyncTaskService {
+
+
+    // 这里进行标注为异步任务，在执行此方法的时候，会单独开启线程来执行
+    @Async
+    public void test1(){
+
+        System.out.println("test1 = " + Thread.currentThread().getName() + " " + UUID.randomUUID().toString());
+
+        try {
+            Thread.sleep(new Random().nextInt(10));
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+
+    @Async
+    public void test2(){
+
+        System.out.println("test2 = " + Thread.currentThread().getName() + " " + UUID.randomUUID().toString());
+
+        try {
+
+            Thread.sleep(new Random().nextInt(10));
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+}
+
+Web:
+   @Resource
+    private AsyncTaskService asyncTaskService;
+
+    @GetMapping(value = "/enableAsyncTest")
+    public void enableAsync(){
+
+        for (int i=0; i<10; i++){
+
+            asyncTaskService.test1();
+            asyncTaskService.test2();
+        }
+    }
+
+
+
+@enaleAsync + @Async输出:
+test2 = ThreadPoolTaskExecutor-6 65356a3c-52bb-470a-acd0-72406a477f4d
+test2 = ThreadPoolTaskExecutor-8 359bfd62-891d-46d1-a42c-d7f3cecc78a6
+test2 = ThreadPoolTaskExecutor-4 848a2026-7c91-41f6-8163-1e050faa912e
+test1 = ThreadPoolTaskExecutor-5 ffa45b9f-c935-457b-a13b-2b7753356917
+test1 = ThreadPoolTaskExecutor-1 80d1a550-bec8-4a13-9402-8bdd01e7493d
+test2 = ThreadPoolTaskExecutor-2 3b3423bd-634f-46f7-b2d5-39f2d275e6dc
+test1 = ThreadPoolTaskExecutor-3 e1984921-49c6-404d-85f7-3ae284037d13
+test1 = ThreadPoolTaskExecutor-7 ae7a5200-cc45-449a-9d8a-ce94d8c4126c
+test2 = ThreadPoolTaskExecutor-2 463a1e32-d591-4a51-8fad-0532bcd7165d
+test1 = ThreadPoolTaskExecutor-4 6ef6a9f6-3d82-4b6a-a93f-7f5b48e43e62
+test2 = ThreadPoolTaskExecutor-4 6276bb13-6e0b-40fa-a308-b5e720b6ff41
+test1 = ThreadPoolTaskExecutor-7 92232a60-5b65-4614-ab0f-69c07139e11c
+test2 = ThreadPoolTaskExecutor-3 5508c7a9-7cfc-4454-adbd-e9c665820713
+test1 = ThreadPoolTaskExecutor-8 a4d974b2-161e-41e2-a23b-7aea3b3abbc3
+test2 = ThreadPoolTaskExecutor-2 1218f8ad-7b7b-4d61-a192-9ea4ab27730a
+test1 = ThreadPoolTaskExecutor-8 8f7dc67b-0b88-4c92-a9dd-7fb0bddb0a6e
+test2 = ThreadPoolTaskExecutor-1 d338e198-121b-484c-b63f-08529affa43f
+....
+
+不开启输出, 不会创建多个线程:http-nio-8080-exec-1
+test1 = http-nio-8080-exec-1 8371a21a-5cb3-41b8-a28e-36e783f52b51
+test2 = http-nio-8080-exec-1 299fd863-94f3-4326-9c1e-35280f8e38cc
+test1 = http-nio-8080-exec-1 d12be40a-75c7-4414-887a-5db9b3f3abe4
+test2 = http-nio-8080-exec-1 d4696aad-b7ec-4f85-9c09-84291bccf542
+
+```
+
+#### TODO: @EnableScheduling, @EnableTransactionManagement, @EnableAspectJAutoProxy, @EnableWebMvc, @PostConstruct, @service static类注入失败

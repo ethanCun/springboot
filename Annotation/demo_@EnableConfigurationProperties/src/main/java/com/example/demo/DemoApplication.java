@@ -1,10 +1,16 @@
 package com.example.demo;
 
 import com.example.demo.Config.Config;
+import com.example.demo.Service.AsyncTaskService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.xml.ws.Service;
 
 //只扫描不和app在同一个包下的其他包 则app所在的包和子包下面的类不会被扫描
 @ComponentScan(basePackages = {"com.example"})
@@ -14,8 +20,10 @@ import org.springframework.context.annotation.ComponentScan;
 //@EnableConfigurationProperties({Config.class})
 public class DemoApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
+
     }
 
 }

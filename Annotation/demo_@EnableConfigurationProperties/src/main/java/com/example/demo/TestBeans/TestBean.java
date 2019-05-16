@@ -12,7 +12,8 @@ import org.springframework.context.annotation.Configuration;
  * ，如果该值为空，则返回false;如果值不为空，则将该值与havingValue指定的值进行比较，
  * 如果一样则返回true;否则返回false。如果返回值为false，则该configuration不生效；为true则生效。
  * */
-@ConditionalOnProperty(name = "configure.czy.name", havingValue = "czy2")
+//@ConditionalOnProperty(name = "configure.czy.name", havingValue = "czy2")
+@ConditionalOnProperty(prefix = "configure.czy", value = "name", havingValue = "czy")
 @Configuration
 public class TestBean {
 
