@@ -1,5 +1,97 @@
 <p><a href="https://blog.csdn.net/isea533/article/details/50412212">SpringBoot静态资源处理</a></p>
 
+#### @EnableAutoConfiguration: 让spring根据结构布局自动加载各个类的注解 并进行调用
+```
+spring通常建议我们将main方法所在的类放到一个root包下，@EnableAutoConfiguration（开启自动配置）注解通常都
+
+放到main所在类的上面，下面是一个典型的结构布局：
+
+com
+ +- example
+     +- myproject
+         +- Application.java
+         |
+         +- domain
+         |   +- Customer.java
+         |   +- CustomerRepository.java
+         |
+         +- service
+         |   +- CustomerService.java
+         |
+         +- web
+             +- CustomerController.java
+
+这样@EnableAutoConfiguration可以从逐层的往下搜索各个加注解的类，例如，你正在编写一个JPA程序（如果你的pom里进行了配置的话），spring会自动去搜索加了@Entity注解的类，并进行调用
+
+```
+
+#### @SpringbootApplication
+```
+使用@SpringbootApplication注解  可以解决根类或者配置类（我自己的说法，就是main所在类）头上注解过多的问题，
+
+一个@SpringbootApplication相当于@Configuration,@EnableAutoConfiguration和 @ComponentScan 并具
+
+有他们的默认属性值
+
+```
+
+#### @Configuration
+```
+
+1. @Configuration配置spring并启动spring容器
+
+@Configuration
+public class TestConfiguration {
+    public TestConfiguration() {
+        System.out.println("TestConfiguration容器启动初始化。。。");
+    }
+}
+
+2. @Configuration启动容器+@Bean注册Bean，@Bean下管理bean的生命周期
+@Configuration
+public class TestConfiguration {
+    public TestConfiguration() {
+        System.out.println("TestConfiguration容器启动初始化。。。");
+    }
+
+    // @Bean注解注册bean,同时可以指定初始化和销毁方法
+    // @Bean(name="testBean",initMethod="start",destroyMethod="cleanUp")
+    @Bean
+    @Scope("prototype")
+    public TestBean testBean() {
+        return new TestBean();
+    }
+}
+
+3. @Configuration启动容器+@Component注册Bean
+//添加注册bean的注解
+@Component
+public class TestBean {
+
+    private String username;
+
+    set get
+}
+
+@Configuration
+//添加自动扫描注解，basePackages为TestBean包路径
+@ComponentScan(basePackages = "com.dxz.demo.configuration")
+public class TestConfiguration {
+    public TestConfiguration() {
+        System.out.println("TestConfiguration容器启动初始化。。。");
+    }
+
+    /*// @Bean注解注册bean,同时可以指定初始化和销毁方法
+    // @Bean(name="testNean",initMethod="start",destroyMethod="cleanUp")
+    @Bean
+    @Scope("prototype")
+    public TestBean testBean() {
+        return new TestBean();
+    }*/
+}
+```
+
+
 #### @EnableConfigurationProperties({PropertiesConfig.class})
 ```
 @EnableConfigurationProperties注解的作用是：使使用 @ConfigurationProperties 注解的类生效。
@@ -87,3 +179,5 @@ configure:
      name: ccccccc
 
 ```
+
+#### TODO:@EnableAsync, @EnableScheduling, @EnableTransactionManagement, @EnableAspectJAutoProxy, @EnableWebMvc。
