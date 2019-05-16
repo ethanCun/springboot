@@ -4,14 +4,24 @@
 ```
 @EnableConfigurationProperties注解的作用是：使使用 @ConfigurationProperties 注解的类生效。
 
-如果一个配置类只配置@ConfigurationProperties注解，而没有使用@Component，那么在IOC容器中是获取不到properties 配置文件转化的bean。说白了 @EnableConfigurationProperties 相当于把使用  @ConfigurationProperties 的类进行了一次注入。
+如果一个配置类只配置@ConfigurationProperties注解，而没有使用@Component，那么在IOC容器中是获取不到
+
+properties 配置文件转化的bean。说白了 @EnableConfigurationProperties 相当于把使用  
+
+@ConfigurationProperties 的类进行了一次注入。
+
 
 ```
 #### @ConfigurationProperties(prefix="configure.czy")
+
 ```
-有时候有这样子的情景，我们想把配置文件的信息，读取并自动封装成实体类，这样子，我们在代码里面使用就轻松方便多了，这时候，我们就可以使用@ConfigurationProperties，它可以把同类的配置信息自动封装成实体类
+有时候有这样子的情景，我们想把配置文件的信息，读取并自动封装成实体类，这样子，我们在代码里面使用就轻松方便多了，这
+
+时候，我们就可以使用@ConfigurationProperties，它可以把同类的配置信息自动封装成实体类
+
 
 configure.czy: 为application.yml的前缀
+
 
 ```
 #### 实例
