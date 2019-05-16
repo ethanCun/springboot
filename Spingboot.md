@@ -1,6 +1,6 @@
 <p><a href="https://blog.csdn.net/isea533/article/details/50412212">SpringBoot静态资源处理</a></p>
 
-#### @EnableConfigurationProperties 
+#### @EnableConfigurationProperties({PropertiesConfig.class})
 ```
 @EnableConfigurationProperties注解的作用是：使使用 @ConfigurationProperties 注解的类生效。
 
