@@ -130,6 +130,16 @@ public class SaleTickets implements Runnable {
 
 #### 线程池
 ```
+        //创建一个缓冲池，缓冲池容量大小为Integer.MAX_VALUE
+        //ExecutorService executorService = Executors.newCachedThreadPool();
+
+        //创建容量为1的缓冲池
+        //ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+        //创建固定容量大小的缓冲池
+        //ExecutorService executorService = Executors.newFixedThreadPool(10);
+```
+```
     //线程池
     /**
      * 如果并发的线程数量很多，并且每个线程都是执行一个时间很短的任务就结束了，
