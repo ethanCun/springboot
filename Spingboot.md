@@ -419,4 +419,7 @@ public @interface czyconfigure {
 
 ```
 
+#### @Value
+##### <p><a href="https://www.cnblogs.com/duanxz/p/4520627.html">参考链接</a></p>
+
 #### TODO: @EnableScheduling, @EnableTransactionManagement, @EnableAspectJAutoProxy, @EnableWebMvc, @PostConstruct, @service static类注入失败
