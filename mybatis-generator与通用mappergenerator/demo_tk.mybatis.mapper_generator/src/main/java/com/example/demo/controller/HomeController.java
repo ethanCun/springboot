@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
+@RequestMapping(value = "/api")
 public class HomeController {
 
     @Autowired
@@ -24,9 +27,14 @@ public class HomeController {
 
     @ResponseBody
     @RequestMapping(value = "/getAllUserInfos")
-    public List<UserInfo> getAllUserInfos(){
+    public Map<String, Object> getAllUserInfos(){
 
-        return userService.getAllUserInfos();
+        Map<String, Object> map = new HashMap<>();
+        map.put("message", "success");
+        map.put("code", 0);
+        map.put("data", userService.getAllUserInfos());
+
+        return map;
     }
 
     @ResponseBody

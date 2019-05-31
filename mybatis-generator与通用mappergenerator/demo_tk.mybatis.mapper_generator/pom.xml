@@ -13,10 +13,32 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>war</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <!-- 在maven中添加如下配置 -->
+    <profiles>
+
+        <!--测试环境-->
+        <profile>
+            <id>dev</id>
+            <properties>
+                <!--profiles.active></profiles.active>是变量的key,test是变量的value-->
+                <profiles.active>dev</profiles.active>
+            </properties>
+        </profile>
+
+        <!--生产环境-->
+        <profile>
+            <id>prod</id>
+            <properties>
+                <profiles.active>prod</profiles.active>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
@@ -33,6 +55,21 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+
+            <!--移除springboot自身嵌入的tomcat-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+      </dependency>
+
+        <!--在pom中添加一条依赖，作为屏蔽springboot中tomcat容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -40,7 +77,6 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.0.1</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -83,52 +119,53 @@
     </dependencies>
 
     <build>
+        <!--springboot修改打包后的项目(jar/war)名称-->
+        <finalName>ROOT</finalName>
         <plugins>
 
+            <!--注释spring-boot-maven-plugin，使用maven-war-plugin-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
             <!--mybatis generator-->
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.7</version>
-                <configuration>
-                    <configurationFile>src/main/resources/mybatisConfg/mybatisGenerator.xml</configurationFile>
-                    <!--允许覆盖-->
-                    <overwrite>true</overwrite>
-                    <!--允许移动-->
-                    <verbose>true</verbose>
-                </configuration>
-                <dependencies>
+            <!--<plugin>-->
+                <!--<groupId>org.mybatis.generator</groupId>-->
+                <!--<artifactId>mybatis-generator-maven-plugin</artifactId>-->
+                <!--<version>1.3.7</version>-->
+                <!--<configuration>-->
+                    <!--<configurationFile>src/main/resources/mybatisConfg/mybatisGenerator.xml</configurationFile>-->
+                    <!--&lt;!&ndash;允许覆盖&ndash;&gt;-->
+                    <!--<overwrite>true</overwrite>-->
+                    <!--&lt;!&ndash;允许移动&ndash;&gt;-->
+                    <!--<verbose>true</verbose>-->
+                <!--</configuration>-->
+                <!--<dependencies>-->
 
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <scope>runtime</scope>
-                        <version>8.0.15</version>
-                    </dependency>
+                    <!--<dependency>-->
+                        <!--<groupId>mysql</groupId>-->
+                        <!--<artifactId>mysql-connector-java</artifactId>-->
+                        <!--<scope>runtime</scope>-->
+                        <!--<version>8.0.15</version>-->
+                    <!--</dependency>-->
 
-                    <dependency>
-                        <groupId>com.alibaba</groupId>
-                        <artifactId>druid</artifactId>
-                        <version>1.1.0</version>
-                    </dependency>
+                    <!--<dependency>-->
+                        <!--<groupId>com.alibaba</groupId>-->
+                        <!--<artifactId>druid</artifactId>-->
+                        <!--<version>1.1.0</version>-->
+                    <!--</dependency>-->
 
-                    <!-- 通用 mapper -->
-                    <dependency>
-                        <groupId>tk.mybatis</groupId>
-                        <artifactId>mapper-spring-boot-starter</artifactId>
-                        <version>1.1.7</version>
-                    </dependency>
+                    <!--&lt;!&ndash; 通用 mapper &ndash;&gt;-->
+                    <!--<dependency>-->
+                        <!--<groupId>tk.mybatis</groupId>-->
+                        <!--<artifactId>mapper-spring-boot-starter</artifactId>-->
+                        <!--<version>1.1.7</version>-->
+                    <!--</dependency>-->
 
+                <!--</dependencies>-->
 
-
-                </dependencies>
-
-            </plugin>
+            <!--</plugin>-->
 
         </plugins>
     </build>

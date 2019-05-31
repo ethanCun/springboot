@@ -1,13 +1,5 @@
 spring:
-  datasource:
-    username: root
-    password: czy1212
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test
-    type: com.alibaba.druid.pool.DruidDataSource
-
-mybatis:
-  mapper-locations: classpath:mappers/*.xml
-  type-aliases-package: com.example.demo.domain
-  configuration:
-    map-underscore-to-camel-case: true
+  #引用环境部署
+  profiles:
+    #<!-- 这里引用的是pom.xml中配置的key -->
+    active: "@profiles.active@"
