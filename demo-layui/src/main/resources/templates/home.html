@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layui用户列表测试</title>
+
+    <link rel="stylesheet" th:href="@{layui/css/layui.css}">
+    <script th:src="@{layui/layui.js}"></script>
+
+    <style>
+        body{margin: 10px;}
+        .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
+    </style>
+
+</head>
+<body>
+
+<!--
+注意cols:
+[
+[
+]
+]
+这个要分行写 不然会被thyeleaf认为是内联标签 引起错误
+-->
+
+<!--<div class="layui-btn-group demoTable">-->
+    <!--<button class="layui-btn" data-th-type="parseTable">立即转化为数据表格</button>-->
+<!--</div>-->
+
+<!--<table lay-filter="parse-table-demo">-->
+
+    <!--<thead>-->
+        <!--<tr>-->
+            <!--<th lay-data="{field: 'username', width: 200}">昵称</th>-->
+            <!--<th lay-data="{field: 'age', width:200}">年龄</th>-->
+        <!--</tr>-->
+    <!--</thead>-->
+
+    <!--<tbody>-->
+        <!--<tr>-->
+            <!--<td>zhangsan</td>-->
+            <!--<td>20</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>lisi</td>-->
+            <!--<td>30</td>-->
+        <!--</tr>-->
+    <!--</tbody>-->
+
+<!--</table>-->
+
+<!--lay-filter="test" 用于table的监听事件-->
+<table class="layui-hide" id="test" lay-filter="test"></table>
+
+<!--头部工具栏-->
+<script type="text/html" id="toolbarDemo">
+
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选择数据</button>
+        <button class="layui-btn layui-btn-sm" lay-event="getChechLength">获取选中数目</button>
+        <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否选中</button>
+    </div>
+</script>
+
+
+<!--行内按钮-->
+<script type="text/html" id="barDemo">
+
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete">删除</a>
+</script>
+
+
+<script>
+
+    // 赋值数据库数据
+    layui.use('table', function(){
+
+        var table = layui.table;
+
+        table.render({
+
+            elem: '#test'
+            ,url:'/demo/table/user'
+            ,cellMinWidth: 120 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,totalRow: true //开启合计
+            ,toolbar: '#toolbarDemo' //头部工具栏
+            ,cols: [
+                [
+                    {type: 'checkbox'} //开启复选框checkbox 开启单选框radio
+                    ,{field:'id', width:80, title: 'ID', sort: true, totalRowText: '合计'}
+                    ,{field:'username', width:80, title: '用户名', sort: true, align: 'center'}
+                    ,{field:'sex', width:80, title: '性别', sort: true}
+                    ,{field:'city', width:80, title: '城市', templet: function (res) {
+                        return '<em>' + res.city + '</em>';
+                    }}
+                    ,{field:'sign', title: '签名', width: '30%', minWidth: 100} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                    ,{field:'experience', title: '积分', sort: true}
+                    ,{field:'score', title: '评分', sort: true, edit: 'text', totalRow: true} //开启合计totalRow: true //开启编辑edit: 'text'
+                    ,{field:'classify', title: '职业'}
+                    ,{field:'wealth', width:137, title: '财富', sort: true}
+                    ,{fixed: 'right', title: '操作', toolbar: '#barDemo', width: 150}
+                ]
+            ],
+            skin: 'line', //表格风格
+            even: false,
+            page: true, //开启分页
+            limits: [5, 7, 10], //提供每页显示数量的选择
+            limit: 5  //每页默认显示的数量
+        });
+
+        //头部工具监听事件
+        table.on('toolbar(test)', function (obj) {
+
+            console.log("obj = " + JSON.stringify(obj));
+
+            var checkStatus = table.checkStatus(obj.config.id);
+
+            switch (obj.event){
+
+                case 'getCheckData':
+
+                    var data = checkStatus.data;
+                    layer.alert(JSON.stringify(data));
+                    break;
+
+                case 'getChechLength':
+
+                    var data = checkStatus.data;
+                    layer.msg('选中了:' + data.length + ' 个');
+                    break;
+
+                case 'isAll':
+
+                    layer.msg(checkStatus.isAll ? '全选' : '未全选');
+                    break;
+            }
+        });
+
+        //监听行事件
+        table.on('tool(test)', function (obj) {
+            
+            console.log("obj = " + JSON.stringify(obj));
+
+            var data = obj.data;
+
+            if (obj.event = 'edit') {
+
+                layer.prompt({
+                    fromType: 2,
+                    value: data.city
+                }, function (value, index) {
+
+                    obj.update({
+                        city: value
+                    });
+
+                    layer.close(index);
+                })
+
+            }else if (obj.event = 'delete'){
+
+
+                layer.confirm('确定删除吗?', function (index) {
+
+                    obj.del();
+
+                    layer.close(index);
+                })
+            }
+
+        });
+
+        //监听单元格编辑
+        table.on('edit(test)', function (obj) {
+
+            console.log("obj = " + JSON.stringify(obj));
+
+            var value = obj.value; //修改后的值
+            var data = obj.data; //所在行的所有键值
+            var field = obj.field; //所在行的字段
+
+            layer.msg('[ID: ' + data.id +'] ' + field + '字段已更改为: ' + value);
+        });
+    });
+
+</script>
+
+<!--<script>-->
+
+    <!--// layui.use('table', function(){-->
+    <!--//-->
+    <!--//     var $ = layui.$, active = {-->
+    <!--//-->
+    <!--//         parseTable: function(){-->
+    <!--//-->
+    <!--//             table.init('parse-table-demo', {-->
+    <!--//-->
+    <!--//             }); //转化静态表格-->
+    <!--//         }-->
+    <!--//     };-->
+    <!--//-->
+    <!--//     $('.demoTable .layui-btn').on('click', function () {-->
+    <!--//-->
+    <!--//         var type = $(this).data(type);-->
+    <!--//-->
+    <!--//         active[type] ? active[type].call(this) : '';-->
+    <!--//     });-->
+    <!--// });-->
+
+    <!--//赋值本地数据-->
+    <!--// layui.use('table', function(){-->
+    <!--//-->
+    <!--//     var table = layui.table;-->
+    <!--//-->
+    <!--//     table.render({-->
+    <!--//-->
+    <!--//        elem: '#test',-->
+    <!--//        cols: [-->
+    <!--//            [-->
+    <!--//                {field: 'id', title: 'ID', width: 80, sort: true, align: 'center'},-->
+    <!--//                {filed: 'username', title: '用户名', width: 80, sort: true},-->
+    <!--//                {field:'sex', width:80, title: '性别', sort: true},-->
+    <!--//                {field:'city', width:80, title: '城市'},-->
+    <!--//                {field:'sign', title: '签名', width: '30%', minWidth: 100}, //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增-->
+    <!--//                {field:'experience', title: '积分', sort: true},-->
+    <!--//                {field:'score', title: '评分', sort: true},-->
+    <!--//                {field:'classify', title: '职业'},-->
+    <!--//                {field:'wealth', width:137, title: '财富', sort: true}-->
+    <!--//            ]-->
+    <!--//        ],-->
+    <!--//         data:[-->
+    <!--//             {-->
+    <!--//                 'id': '10000',-->
+    <!--//                 'username': 'zhangsan',-->
+    <!--//                 'sex': 'man',-->
+    <!--//                 'city': 'changsha',-->
+    <!--//                 'sign': 'sign123',-->
+    <!--//                 'experience': 'two years',-->
+    <!--//                 'score': '100',-->
+    <!--//                 'classify': 'iOS/Java',-->
+    <!--//                 'wealth': '$999999.9'-->
+    <!--//             }-->
+    <!--//         ]-->
+    <!--//-->
+    <!--//     });-->
+    <!--//-->
+    <!--// });-->
+
+
+
+<!--</script>-->
+
+</body>
+</html>
