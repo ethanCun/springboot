@@ -46,7 +46,6 @@ public class UserController {
 
         PageInfo<User> pageInfo = userService.findUserList(request, param);
 
-
         map.put("code", 0);
         map.put("data", pageInfo.getList());
         map.put("count", pageInfo.getTotal());

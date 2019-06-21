@@ -35,4 +35,10 @@ public class HomeController {
 
         return "grid";
     }
+
+    @GetMapping(value = "/datepicker")
+    public String datepicker(){
+
+        return "DatePicker";
+    }
 }
