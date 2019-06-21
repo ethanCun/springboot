@@ -23,6 +23,11 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    //@RequestParam: 明确地告诉controller，这两个参数是从请求参数中获取，一旦没有获取，则报错。
+    //用map接受参数时，必须使用@RequestParam, 因为map不像entity一样，没有和请求参数一致的字段
+    //用Entity接受请求参数时，如果请求参数和Entity中的参数一致，
+    // 则可以省略@RequestParam，如果不一致，则需要指定， 比如
+    //public String login(@RequestParam("username")String username, @RequestParam("password")String password){}
     @ResponseBody
     @GetMapping(value = "/table/user")
     public Map<String, Object> users(HttpServletRequest request, @RequestParam Map<String, String> param){
