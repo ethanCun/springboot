@@ -55,6 +55,153 @@
             </div>
         </div>
     </div>
+
+    <div class="layui-form-item">
+
+        <div class="layui-inline">
+
+            <div class="layui-form-label">年月选择器</div>
+            <div class="layui-input-inline">
+                <input class="layui-input" type="text" id="test3" placeholder="yyyy-MM">
+            </div>
+
+            <div class="layui-inline">
+                <div class="layui-form-label">时间选择器</div>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="test4" type="text" placeholder="HH:mm:ss">
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <div class="layui-form-label">日期时间选择器</div>
+                <div class="layui-input-inline">
+                    <input class="layui-input" type="text" id="test5" placeholder="yyyy-MM-dd HH:mm:ss">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>范围选择</legend>
+</fieldset>
+
+<div class="layui-form">
+    <div class="layui-form-item">
+
+        <div class="layui-inline">
+            <div class="layui-form-label">日期范围</div>
+            <div class="layui-input-inline">
+                <input class="layui-input" id="test6" placeholder="yyyy-MM-dd HH:mm:ss" type="text">
+            </div>
+        </div>
+
+        <div class="layui-inline">
+            <div class="layui-form-label">年范围</div>
+            <div class="layui-input-inline">
+                <input class="layui-input" type="text" placeholder="yyyy" id="test7">
+            </div>
+        </div>
+
+        <div class="layui-inline">
+            <div class="layui-form-label">年月范围</div>
+            <div class="layui-input-inline">
+                <input class="layui-input" id="test8" type="text" placeholder="yyyy-MM">
+            </div>
+        </div>
+
+        <div class="layui-inline">
+            <div class="layui-form-label">时间范围</div>
+            <div class="layui-input-inline">
+                <input class="layui-input" type="text" id="test9" placeholder="HH:mm:ss">
+            </div>
+        </div>
+
+        <div class="layui-inline">
+            <div class="layui-form-label">日期时间范围</div>
+            <div class="layui-input-inline">
+                <input class="layui-input" id="test10" placeholder="yyyy-MM-dd HH:mm:ss" type="text">
+            </div>
+        </div>
+    </div>
+</div>
+
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>自定义日期格式</legend>
+</fieldset>
+
+<div class="layui-form">
+
+    <div class="layui-form-item">
+
+        <div class="layui-form-label">请选择日期</div>
+        <div class="layui-input-inline">
+            <input type="text" id="test11" class="layui-input" placeholder="yyyy年MM月dd日">
+        </div>
+
+        <div class="layui-form-label">请选择时间</div>
+        <div class="layui-input-inline">
+            <input class="layui-input" type="text" placeholder="HH时mm分ss秒" id="test12">
+        </div>
+
+        <div class="layui-form-label">请选择日期时间</div>
+        <div class="layui-input-inline">
+            <input class="layui-input" id="test13" placeholder="yyyy年MM月dd日" type="text">
+        </div>
+    </div>
+</div>
+
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>自定义重要日子</legend>
+</fieldset>
+
+<div class="layui-form">
+    <div class="layui-form-item">
+        <div class="layui-form-label">自定义重要日子</div>
+        <div class="layui-input-inline">
+            <input class="layui-input" id="test14" placeholder="yyyy-MM-dd" type="text">
+        </div>
+    </div>
+</div>
+
+
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>限定可选日期</legend>
+</fieldset>
+
+<div class="layui-form">
+    <div class="layui-form-item">
+        <div class="layui-form-label">限定可选日期</div>
+        <div class="layui-input-inline">
+            <input class="layui-input" type="text" id="test15" placeholder="yyyy-MM-dd">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-form-label">限定前后几天</div>
+        <div class="layui-input-inline">
+            <input class="layui-input" type="text" id="test16" placeholder="yyyy-MM-dd">
+        </div>
+    </div>
+</div>
+
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>自定义触发事件</legend>
+</fieldset>
+
+<div class="layui-form">
+    <div class="layui-form-item">
+
+        <div class="layui-form-label" id="click">单击我</div>
+        <div class="layui-input-inline">
+            <input class="layui-input" id="test17" placeholder="yyy-MM-dd" type="text">
+        </div>
+
+        <div class="layui-form-label" id="dblClick">双击我</div>
+        <div class="layui-input-inline">
+            <input class="layui-input" id="test18" placeholder="yyyy-MM-dd" type="text">
+        </div>
+    </div>
 </div>
 
 <link rel="stylesheet" th:href="@{layui/css/layui.css}">
@@ -90,6 +237,162 @@
             type: 'year',
             lang: 'en'
         });
+
+        //年月选择器
+        laydate.render({
+            elem: '#test3',
+            type: 'month'
+        });
+
+        //月选择器
+        laydate.render({
+
+            elem: '#test4',
+            type: 'time'
+        });
+
+        //日期时间选择器
+        laydate.render({
+
+            elem: '#test5',
+            type: 'datetime'
+        });
+
+        //日期范围
+        laydate.render({
+
+            elem: '#test6',
+            range: true
+        });
+
+        //年范围
+        laydate.render({
+
+            elem: '#test7',
+            type: 'year',
+            range: true
+        });
+
+        //年月范围
+        laydate.render({
+
+            elem: '#test8',
+            type: 'month',
+            range: true
+        });
+
+        //时间范围
+        laydate.render({
+
+            elem: '#test9',
+            type: 'time',
+            range: true
+        });
+
+        //日期时间范围
+        laydate.render({
+
+            elem: '#test10',
+            type: 'datetime',
+            range: true
+        });
+
+        //自定义日期选择
+        laydate.render({
+
+            elem: '#test11',
+            format: 'yyyy年mm月dd日',
+            range: true
+        });
+
+        //自定义时间选择
+        laydate.render({
+
+            elem: '#test12',
+            format: 'HH时mm分ss秒',
+            type: 'time',
+            range: true
+        });
+
+        //自定义日期时间选择
+        laydate.render({
+
+            elem: '#test13',
+            type: 'datetime',
+            format: 'yyyy年MM月dd日 HH时mm分ss秒',
+            range: '到'
+        });
+
+        //自定义重要节日
+        laydate.render({
+
+            elem: '#test14',
+            calendar: true, //开启公历节日
+            mark:{  //添加自定义日期
+
+                '0-01-01': '生日', //0：表示任意年
+                '0-0-10': '工资'   //表示每个月10号发工资
+            },
+            done:function (value, date) {  //选中后的回调
+
+                //value = "2000-01-01" date = {"year":2000,"month":1,"date":1,"hours":0,"minutes":0,"seconds":0}
+                console.log("done: date = " + JSON.stringify(date) + " value = " + JSON.stringify(value));
+
+                if (date.year === 2000 && date.month === 1 && date.date === 1){
+
+                    layer.msg('我的生日');
+                }
+            },
+            change: function(value, date){  //顶部切换日期的年份月份的回调
+
+                console.log("change: value = " + value + " date = " + JSON.stringify(date));
+
+                layer.msg('您选中的日期是：' + value + " 对应的对象是:" + JSON.stringify(date));
+            }
+        });
+
+        //限定可选日期
+        laydate.render({
+
+            elem: '#test15',
+            min: '2019-01-01',
+            max: '2020-01-01',
+            showBottom: false, //是否显示底部栏
+            theme: 'grid' //自定义格子主题
+        });
+
+        //前后各几天
+        laydate.render({
+
+            theme: 'molv', //自定义的墨绿主题
+            elem: '#test16',
+            min: -7,
+            max: 7,
+            btns: ['clear', 'confirm'], //显示的按钮
+            value: '2019-02-02',
+            isInitValue: true //初始赋值 配合value
+        });
+
+        //单击触发
+        laydate.render({
+
+            elem: '#test17',
+            show: false, //初始的时候是否显示日期
+            eventElem: '#click',
+            trigger: 'click'
+        });
+
+        //双击触发
+        lay('#dblClick').on('dblclick', function () {
+
+            laydate.render({
+
+                elem: '#test18',
+                show: true,
+                closeStop: '#dblClick'
+            })
+        })
+
     });
 </script>
 

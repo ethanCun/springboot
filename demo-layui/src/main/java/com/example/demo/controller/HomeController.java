@@ -41,4 +41,10 @@ public class HomeController {
 
         return "DatePicker";
     }
+
+    @GetMapping(value = "/form")
+    public String form(){
+
+        return "form";
+    }
 }
