@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{layui/css/layui.css}">
+    <script th:src="@{jquery-3.1.1.min.js}"></script>
+    <script th:src="@{layui/layui.js}"></script>
+
+</head>
+<body>
+
+<div class="layui-container">
+
+    <div class="layui-row">
+
+        <!--<div class="demo-tree-more" id="test1"></div>-->
+        <div class="demo-tree demo-tree-box" id="test1"></div>
+    </div>
+</div>
+
+<script>
+
+    //模拟数据 id title checked spread children:[id title checked spread children] 递归
+    data = [{
+        title: '一级1'
+        ,id: 1
+        ,checked: true
+        ,spread: true
+        ,children: [{
+            title: '二级1-1 可允许跳转'
+            ,id: 3
+            ,href: 'https://www.layui.com/'
+            ,children: [{
+                title: '三级1-1-3'
+                ,id: 23
+                ,children: [{
+                    title: '四级1-1-3-1'
+                    ,id: 24
+                    ,children: [{
+                        title: '五级1-1-3-1-1'
+                        ,id: 30
+                    },{
+                        title: '五级1-1-3-1-2'
+                        ,id: 31
+                    }]
+                }]
+            },{
+                title: '三级1-1-1'
+                ,id: 7
+                ,children: [{
+                    title: '四级1-1-1-1 可允许跳转'
+                    ,id: 15
+                    ,href: 'https://www.layui.com/doc/'
+                }]
+            },{
+                title: '三级1-1-2'
+                ,id: 8
+                ,children: [{
+                    title: '四级1-1-2-1'
+                    ,id: 32
+                }]
+            }]
+        },{
+            title: '二级1-2'
+            ,id: 4
+            ,spread: true
+            ,children: [{
+                title: '三级1-2-1'
+                ,id: 9
+                ,disabled: true
+            },{
+                title: '三级1-2-2'
+                ,id: 10
+            }]
+        },{
+            title: '二级1-3'
+            ,id: 20
+            ,children: [{
+                title: '三级1-3-1'
+                ,id: 21
+            },{
+                title: '三级1-3-2'
+                ,id: 22
+            }]
+        }]
+    },{
+        title: '一级2'
+        ,id: 2
+        ,spread: true
+        ,children: [{
+            title: '二级2-1'
+            ,id: 5
+            ,spread: true
+            ,children: [{
+                title: '三级2-1-1'
+                ,id: 11
+            },{
+                title: '三级2-1-2'
+                ,id: 12
+            }]
+        },{
+            title: '二级2-2'
+            ,id: 6
+            ,children: [{
+                title: '三级2-2-1'
+                ,id: 13
+            },{
+                title: '三级2-2-2'
+                ,id: 14
+                ,disabled: true
+            }]
+        }]
+    },{
+        title: '一级3'
+        ,id: 16
+        ,children: [{
+            title: '二级3-1'
+            ,id: 17
+            ,fixed: true
+            ,children: [{
+                title: '三级3-1-1'
+                ,id: 18
+            },{
+                title: '三级3-1-2'
+                ,id: 19
+            }]
+        },{
+            title: '二级3-2'
+            ,id: 27
+            ,children: [{
+                title: '三级3-2-1'
+                ,id: 28
+            },{
+                title: '三级3-2-2'
+                ,id: 29
+            }]
+        }]
+    }]
+
+    layui.use('tree', function () {
+
+        var tree = layui.tree;
+
+        //基本演示
+        tree.render({
+
+            elem: '#test1',
+            data: data,
+            showCheckbox: true, //是否显示复选框
+            id: 'demo1',
+            isJump: true, //是否允许点击节点时弹出新窗口跳转
+            showLine: false, //是否开启连接线
+            onlyIconControl: true, //是否仅允许节点左侧图标控制展开收缩
+            accordion: true, //手风琴模式: 只能展开一个
+            edit: ['add', 'update', 'del'], //开启节点操作图标
+            click:function (obj) {
+
+                console.log(JSON.stringify(obj));
+
+                var data = obj.data; //获取当前点击的节点数据
+                layer.msg('状态: ' + obj.state + '<br>节点数据: ' + JSON.stringify(data));
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

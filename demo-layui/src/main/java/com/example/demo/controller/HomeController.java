@@ -47,4 +47,16 @@ public class HomeController {
 
         return "form";
     }
+
+    @GetMapping(value = "/icon")
+    public String icon(){
+
+        return "icon";
+    }
+
+    @GetMapping(value = "/tree")
+    public String tree(){
+
+        return "tree";
+    }
 }

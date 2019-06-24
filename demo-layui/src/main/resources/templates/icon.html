@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>icon</title>
+
+    <link rel="stylesheet" th:href="@{layui/css/layui.css}">
+    <script th:src="@{jquery-3.1.1.min.js}"></script>
+    <script th:src="@{layui/layui.js}"></script>
+</head>
+<body>
+
+<div class="layui-container">
+
+    <div class="layui-row">
+
+        <div class="layui-col-xs12 layui-col-md12 layui-col-sm12 layui-col-lg12"
+        style="margin-top: 100px">
+
+            <i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i>
+            <i class="layui-icon layui-icon-rate-half" style="font-size: 30px; color: #00FF00"></i>
+
+
+            <!--注意这个要旋转起来 应该添加旋转动画 并设置为无限循环-->
+            <i class="layui-icon layui-icon-loading layui-anim-rotate layui-anim-loop"
+               style="display: inline-block; font-size: 30px; color: #1E9FFF;"></i>
+            <i class="layui-icon layui-icon-loading-1 layui-anim-rotate layui-anim-loop"
+               style="font-size: 30px;  display: inline-block"></i>
+
+            <i class="layui-icon layui-anim-rotate layui-anim-loop"
+               style="display: inline-block; font-size: 20px; color: mediumvioletred">正在加载...</i>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--<script th:src="@{layui/layui.js}"></script>-->
+<!--<script>-->
+
+    <!--layui.use('element', function () {-->
+
+        <!--var element = layui.element;-->
+
+    <!--});-->
+<!--</script>-->
+
+</body>
+</html>
