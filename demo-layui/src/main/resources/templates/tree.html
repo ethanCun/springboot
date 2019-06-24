@@ -140,7 +140,49 @@
                 ,id: 29
             }]
         }]
-    }]
+    }];
+
+    data1 = [{
+        title: '江西'
+        ,id: 1
+        ,children: [{
+            title: '南昌'
+            ,id: 1000
+            ,children: [{
+                title: '青山湖区'
+                ,id: 10001
+            },{
+                title: '高新区'
+                ,id: 10002
+            }]
+        },{
+            title: '九江'
+            ,id: 1001
+        },{
+            title: '赣州'
+            ,id: 1002
+        }]
+    },{
+        title: '广西'
+        ,id: 2
+        ,children: [{
+            title: '南宁'
+            ,id: 2000
+        },{
+            title: '桂林'
+            ,id: 2001
+        }]
+    },{
+        title: '陕西'
+        ,id: 3
+        ,children: [{
+            title: '西安'
+            ,id: 3000
+        },{
+            title: '延安'
+            ,id: 3001
+        }]
+    }];
 
     layui.use('tree', function () {
 
@@ -152,19 +194,34 @@
             elem: '#test1',
             data: data,
             showCheckbox: true, //是否显示复选框
-            id: 'demo1',
+            id: 'demo1', //定义索引
             isJump: true, //是否允许点击节点时弹出新窗口跳转
             showLine: false, //是否开启连接线
             onlyIconControl: true, //是否仅允许节点左侧图标控制展开收缩
             accordion: true, //手风琴模式: 只能展开一个
             edit: ['add', 'update', 'del'], //开启节点操作图标
-            click:function (obj) {
+            click:function (obj) { //点击节点触发事件
 
-                console.log(JSON.stringify(obj));
+                alert('点击节点触发：' + JSON.stringify(obj));
+            },
+            oncheck: function (obj) { //点击复选框触发事件
 
-                var data = obj.data; //获取当前点击的节点数据
-                layer.msg('状态: ' + obj.state + '<br>节点数据: ' + JSON.stringify(data));
+                alert('点击复选框触发：' + JSON.stringify(obj));
+            },
+            operate: function (obj) { //操作节点的回调
+
+                alert('操作节点的回调: ' + JSON.stringify(obj));
             }
+        });
+
+        //获取选择的节点
+        var checkdata = tree.getChecked('demo1');
+
+        //重载所有基础参数
+        tree.reload('demo1', {
+
+            //新的参数数据 会覆盖原来的参数数据
+            data: data1
         })
     })
 </script>
