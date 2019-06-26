@@ -1,0 +1,84 @@
+2019-06-25 17:29:17,318 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:17,323 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:17,494 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:17,495 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:17,498 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:17,692 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:17,693 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:17,696 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:17,924 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:17,925 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:17,927 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:18,124 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:18,125 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:18,127 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:18,324 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:18,325 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:18,327 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:18,583 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:18,584 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:18,586 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:18,816 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:18,816 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:18,818 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:37,125 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:37,126 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:37,128 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:37,341 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:37,341 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:37,343 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:37,549 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:37,549 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:37,551 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:37,708 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:37,709 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:37,710 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:37,877 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:37,877 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:37,879 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:38,109 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:38,110 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:38,111 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:38,308 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:38,309 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:38,311 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:38,516 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:38,517 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:38,519 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:38,700 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:38,701 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:38,702 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:38,908 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:38,909 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:38,910 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:39,092 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:39,093 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:39,094 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:39,276 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:39,277 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:39,278 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:39,476 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:39,477 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:39,478 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:50,733 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:50,734 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:50,735 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:51,013 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:51,013 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:51,015 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:51,196 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:51,196 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:51,198 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:51,388 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:51,389 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:51,390 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:51,572 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:51,572 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:51,574 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:51,766 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:51,766 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:51,768 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:51,932 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:51,933 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:51,934 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:52,101 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 

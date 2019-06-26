@@ -1,0 +1,20 @@
+2019-06-25-20-33-02 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-25-20-33-17 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 37191 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-25-20-33-17 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-25-20-33-17 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-25-20-33-18 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-25-20-33-18 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-25-20-33-18 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 945 ms
+  2019-06-25-20-33-19 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-25-20-33-19 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-25-20-33-19 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-25-20-33-19 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.332 seconds (JVM running for 22.851)
+  2019-06-25-20-41-16 [http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-25-20-41-16 [http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 5 ms
+  2019-06-25-20-41-16 [http-nio-8080-exec-2] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+  2019-06-25-20-41-16 [http-nio-8080-exec-2] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==> Parameters: 
+  2019-06-25-20-41-16 [http-nio-8080-exec-2] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - <==      Total: 10
+  2019-06-25-23-56-02 [http-nio-8080-exec-7] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+  2019-06-25-23-56-02 [http-nio-8080-exec-7] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==> Parameters: 
+  2019-06-25-23-56-02 [http-nio-8080-exec-7] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - <==      Total: 10
+  

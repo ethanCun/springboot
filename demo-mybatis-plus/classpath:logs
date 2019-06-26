@@ -1,0 +1,17 @@
+2019-06-25 17:11:42.525  INFO 35362 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 35362 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+2019-06-25 17:11:42.527  INFO 35362 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-06-25 17:11:42.815  WARN 35362 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+2019-06-25 17:11:43.449  INFO 35362 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-25 17:11:43.469  INFO 35362 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-25 17:11:43.469  INFO 35362 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-06-25 17:11:43.617  INFO 35362 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-25 17:11:43.837  INFO 35362 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-06-25 17:11:44.554  INFO 35362 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-25 17:11:44.840  INFO 35362 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-25 17:11:44.844  INFO 35362 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.637 seconds (JVM running for 23.131)
+2019-06-25 17:11:48.831  INFO 35362 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-25 17:11:48.892 DEBUG 35362 --- [http-nio-8080-exec-1] c.e.demo.mapper.TUserMapper.selectAll    : ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:11:48.912 DEBUG 35362 --- [http-nio-8080-exec-1] c.e.demo.mapper.TUserMapper.selectAll    : ==> Parameters: 
+2019-06-25 17:11:48.934 DEBUG 35362 --- [http-nio-8080-exec-1] c.e.demo.mapper.TUserMapper.selectAll    : <==      Total: 10
+2019-06-25 17:12:04.068  INFO 35362 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-25 17:12:04.072  INFO 35362 --- [Thread-38] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

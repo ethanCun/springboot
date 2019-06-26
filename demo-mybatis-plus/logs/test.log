@@ -1,0 +1,28 @@
+2019-06-25 17:29:52,102 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:52,104 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:52,276 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:52,277 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:52,279 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:52,484 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:52,485 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:52,486 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:52,684 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:52,685 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:52,686 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:52,876 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:52,877 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:52,879 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:29:53,133 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+2019-06-25 17:29:53,134 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2019-06-25 17:29:53,136 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 10
+2019-06-25 17:33:02,248 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on CundeiMac.local with PID 35552 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+2019-06-25 17:33:02,251 INFO (SpringApplication.java:646)- No active profile set, falling back to default profiles: default
+2019-06-25 17:33:04,170 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 22.311 seconds (JVM running for 27.827)
+2019-06-25 17:36:19,427 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on CundeiMac.local with PID 35579 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+2019-06-25 17:36:19,429 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-06-25 17:36:19,430 INFO (SpringApplication.java:646)- No active profile set, falling back to default profiles: default
+2019-06-25 17:36:21,444 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 22.395 seconds (JVM running for 27.996)
+2019-06-25 17:37:58,976 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on CundeiMac.local with PID 35600 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+2019-06-25 17:37:58,979 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-06-25 17:37:58,979 INFO (SpringApplication.java:646)- No active profile set, falling back to default profiles: default
+2019-06-25 17:38:00,956 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 22.375 seconds (JVM running for 27.863)

@@ -1,0 +1,618 @@
+2019-06-26-00-00-56 [Thread-37] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-00-56 [Thread-37] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-01-07 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-01-22 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 38885 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-01-22 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-01-22 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-01-23 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-01-23 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-01-23 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 935 ms
+  2019-06-26-00-01-23 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-01-24 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-01-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-01-24 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.314 seconds (JVM running for 22.832)
+  2019-06-26-00-01-50 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-01-50 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 6 ms
+  2019-06-26-00-02-18 [http-nio-8080-exec-2] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+  2019-06-26-00-02-18 [http-nio-8080-exec-2] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==> Parameters: 
+  2019-06-26-00-02-18 [http-nio-8080-exec-2] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - <==      Total: 10
+  2019-06-26-00-04-19 [Thread-37] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-04-19 [Thread-37] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-04-27 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-04-43 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 38917 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-04-43 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-04-43 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-04-43 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-04-43 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-04-43 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 889 ms
+  2019-06-26-00-04-44 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-04-44 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-04-45 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-04-45 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.241 seconds (JVM running for 22.729)
+  2019-06-26-00-06-59 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-06-59 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 5 ms
+  2019-06-26-00-06-59 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+  2019-06-26-00-06-59 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==> Parameters: 
+  2019-06-26-00-06-59 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - <==      Total: 10
+  2019-06-26-00-07-46 [Thread-37] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-07-46 [Thread-37] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-07-54 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-08-10 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 38948 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-08-10 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-08-10 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-08-10 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-08-10 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-08-10 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 845 ms
+  2019-06-26-00-08-11 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-08-11 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-08-11 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-08-11 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.186 seconds (JVM running for 22.695)
+  2019-06-26-00-08-16 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-08-16 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 5 ms
+  2019-06-26-00-08-53 [Thread-37] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-08-53 [Thread-37] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-09-01 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-09-16 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 38965 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-09-16 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-09-16 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-09-16 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-09-17 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-09-17 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 852 ms
+  2019-06-26-00-09-17 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-09-18 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-09-18 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-09-18 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.193 seconds (JVM running for 22.768)
+  2019-06-26-00-09-25 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-09-25 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 6 ms
+  2019-06-26-00-09-40 [Thread-37] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-09-40 [Thread-37] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-09-48 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-10-04 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 38972 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-10-04 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-10-04 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-10-04 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-10-05 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-10-05 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 935 ms
+  2019-06-26-00-10-05 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-10-05 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-10-06 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-10-06 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.343 seconds (JVM running for 22.839)
+  2019-06-26-00-10-10 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-10-10 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 5 ms
+  2019-06-26-00-10-18 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-10-18 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-10-49 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-11-04 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 38981 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-11-04 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-11-04 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-11-05 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-11-05 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-11-06 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1087 ms
+  2019-06-26-00-11-06 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-11-07 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-11-07 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-11-07 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.842 seconds (JVM running for 23.867)
+  2019-06-26-00-11-36 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-11-36 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 7 ms
+  2019-06-26-00-15-58 [http-nio-8080-exec-3] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+  2019-06-26-00-15-58 [http-nio-8080-exec-3] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==> Parameters: 
+  2019-06-26-00-15-58 [http-nio-8080-exec-3] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - <==      Total: 10
+  2019-06-26-00-16-46 [Thread-39] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-16-46 [Thread-39] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-17-05 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-17-20 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39043 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-17-20 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-17-20 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-17-20 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-17-21 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-17-21 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1069 ms
+  2019-06-26-00-17-21 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-17-22 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-17-22 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-17-22 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.692 seconds (JVM running for 23.444)
+  2019-06-26-00-18-11 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-18-11 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 6 ms
+  2019-06-26-00-18-11 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==>  Preparing: select USER_ID, USERNAME, `PASSWORD`, DEPT_ID, EMAIL, MOBILE, `STATUS`, CRATE_TIME, MODIFY_TIME, LAST_LOGIN_TIME, SSEX, THEME, AVATAR, DESCRIPTION from t_user 
+  2019-06-26-00-18-11 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - ==> Parameters: 
+  2019-06-26-00-18-11 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectAll] [DEBUG] - <==      Total: 10
+  2019-06-26-00-21-36 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-21-36 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-21-55 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-22-11 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39089 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-22-11 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-22-11 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-22-11 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-22-12 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-22-12 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1100 ms
+  2019-06-26-00-22-12 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-22-13 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-22-13 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-22-13 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.927 seconds (JVM running for 23.652)
+  2019-06-26-00-22-20 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-22-20 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 7 ms
+  2019-06-26-00-37-15 [Thread-39] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-37-15 [Thread-39] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-38-14 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-38-29 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39258 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-38-29 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-38-29 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-38-30 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-38-30 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-38-30 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 987 ms
+  2019-06-26-00-38-30 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-38-31 [main] [com.baomidou.mybatisplus.core.metadata.TableInfoHelper] [WARN] - Warn: Could not find @TableId in Class: com.example.demo.entity.TUser.
+  2019-06-26-00-38-31 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.TUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-00-38-31 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-38-32 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-00-38-32 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-38-32 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.864 seconds (JVM running for 23.44)
+  2019-06-26-00-38-47 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-38-47 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 7 ms
+  2019-06-26-00-38-47 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectList] [DEBUG] - ==>  Preparing: SELECT u_s_e_r__i_d AS USER_ID,u_s_e_r_n_a_m_e,p_a_s_s_w_o_r_d,d_e_p_t__i_d AS DEPT_ID,e_m_a_i_l,m_o_b_i_l_e,s_t_a_t_u_s,c_r_a_t_e__t_i_m_e AS CRATE_TIME,m_o_d_i_f_y__t_i_m_e AS MODIFY_TIME,l_a_s_t__l_o_g_i_n__t_i_m_e AS LAST_LOGIN_TIME,s_s_e_x,t_h_e_m_e,a_v_a_t_a_r,d_e_s_c_r_i_p_t_i_o_n FROM t_user 
+  2019-06-26-00-38-47 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectList] [DEBUG] - ==> Parameters: 
+  2019-06-26-00-41-09 [Thread-39] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-41-09 [Thread-39] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-41-59 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-42-15 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39293 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-42-15 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-42-15 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-42-15 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-42-16 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-42-16 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1159 ms
+  2019-06-26-00-42-16 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-42-17 [main] [com.baomidou.mybatisplus.core.metadata.TableInfoHelper] [WARN] - Warn: Could not find @TableId in Class: com.example.demo.entity.TUser.
+  2019-06-26-00-42-17 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.TUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-00-42-17 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-42-17 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-00-42-17 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-42-17 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.654 seconds (JVM running for 23.199)
+  2019-06-26-00-42-31 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-42-31 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 6 ms
+  2019-06-26-00-42-31 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectList] [DEBUG] - ==>  Preparing: SELECT u_s_e_r__i_d AS USER_ID,u_s_e_r_n_a_m_e,p_a_s_s_w_o_r_d,d_e_p_t__i_d AS DEPT_ID,e_m_a_i_l,m_o_b_i_l_e,s_t_a_t_u_s,c_r_a_t_e__t_i_m_e AS CRATE_TIME,m_o_d_i_f_y__t_i_m_e AS MODIFY_TIME,l_a_s_t__l_o_g_i_n__t_i_m_e AS LAST_LOGIN_TIME,s_s_e_x,t_h_e_m_e,a_v_a_t_a_r,d_e_s_c_r_i_p_t_i_o_n FROM t_user 
+  2019-06-26-00-42-31 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectList] [DEBUG] - ==> Parameters: 
+  2019-06-26-00-45-40 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-45-40 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-45-48 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-46-03 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39332 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-46-03 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-46-03 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-46-03 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-46-04 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-46-04 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1032 ms
+  2019-06-26-00-46-04 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-46-05 [main] [com.baomidou.mybatisplus.core.metadata.TableInfoHelper] [WARN] - Warn: Could not find @TableId in Class: com.example.demo.entity.TUser.
+  2019-06-26-00-46-05 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.TUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-00-46-05 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-46-05 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-00-46-05 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-46-05 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.472 seconds (JVM running for 22.989)
+  2019-06-26-00-46-19 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-46-19 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 5 ms
+  2019-06-26-00-46-19 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectList] [DEBUG] - ==>  Preparing: SELECT u_s_e_r__i_d AS USER_ID,u_s_e_r_n_a_m_e,p_a_s_s_w_o_r_d,d_e_p_t__i_d AS DEPT_ID,e_m_a_i_l,m_o_b_i_l_e,s_t_a_t_u_s,c_r_a_t_e__t_i_m_e AS CRATE_TIME,m_o_d_i_f_y__t_i_m_e AS MODIFY_TIME,l_a_s_t__l_o_g_i_n__t_i_m_e AS LAST_LOGIN_TIME,s_s_e_x,t_h_e_m_e,a_v_a_t_a_r,d_e_s_c_r_i_p_t_i_o_n FROM t_user 
+  2019-06-26-00-46-19 [http-nio-8080-exec-1] [com.example.demo.mapper.TUserMapper.selectList] [DEBUG] - ==> Parameters: 
+  2019-06-26-00-50-35 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-50-35 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-00-50-44 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-00-50-59 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39383 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-00-50-59 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-00-50-59 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-00-50-59 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-00-51-00 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-00-51-00 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 948 ms
+  2019-06-26-00-51-00 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-00-51-01 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-00-51-01 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-51-01 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-00-51-01 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-00-51-01 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.428 seconds (JVM running for 22.912)
+  2019-06-26-00-51-07 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-00-51-07 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 5 ms
+  2019-06-26-00-51-07 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.selectList] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game 
+  2019-06-26-00-51-07 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.selectList] [DEBUG] - ==> Parameters: 
+  2019-06-26-00-51-07 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.selectList] [DEBUG] - <==      Total: 12
+  2019-06-26-00-58-16 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-00-58-16 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-03-12 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-03-28 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39527 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-03-28 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-03-28 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-03-29 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-03-30 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-03-31 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 3002 ms
+  2019-06-26-01-03-31 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-03-32 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-03-32 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-03-32 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-03-32 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-03-32 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 20.6 seconds (JVM running for 26.638)
+  2019-06-26-01-03-44 [Thread-44] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-03-44 [Thread-44] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-04-14 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-04-30 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39538 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-04-30 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-04-30 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-04-30 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-04-30 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-04-31 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 968 ms
+  2019-06-26-01-04-31 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-04-31 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-04-31 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-04-32 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-04-32 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-04-32 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.454 seconds (JVM running for 23.218)
+  2019-06-26-01-04-48 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-04-48 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 23 ms
+  2019-06-26-01-05-05 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-05-05 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-05-05 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-05-05 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 10(Long)
+  2019-06-26-01-05-05 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 10
+  2019-06-26-01-05-10 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-05-10 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-05-10 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-05-10 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 1(Long)
+  2019-06-26-01-05-10 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 1
+  2019-06-26-01-05-15 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-05-15 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-05-15 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-05-15 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 2(Long)
+  2019-06-26-01-05-15 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 2
+  2019-06-26-01-10-40 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-10-40 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-10-49 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-11-04 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39599 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-11-04 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-11-04 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-11-05 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-11-05 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-11-05 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 966 ms
+  2019-06-26-01-11-06 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-11-06 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-11-07 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-11-07 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-11-07 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-11-07 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.736 seconds (JVM running for 23.415)
+  2019-06-26-01-11-20 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-11-20 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 6 ms
+  2019-06-26-01-11-20 [http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [WARN] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+  2019-06-26-01-11-22 [http-nio-8080-exec-3] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [WARN] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+  2019-06-26-01-11-27 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game 
+  2019-06-26-01-11-27 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-11-27 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - <==      Total: 12
+  2019-06-26-01-12-03 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-12-03 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-12-12 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-12-32 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-12-47 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39619 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-12-47 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-12-47 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-12-48 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-12-48 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-12-48 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 985 ms
+  2019-06-26-01-12-49 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-12-49 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-12-49 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-12-49 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-12-50 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-12-50 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.527 seconds (JVM running for 23.027)
+  2019-06-26-01-13-00 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-13-00 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 8 ms
+  2019-06-26-01-13-08 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game 
+  2019-06-26-01-13-08 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-13-08 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - <==      Total: 12
+  2019-06-26-01-14-32 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-14-32 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-14-41 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-14-56 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39665 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-14-56 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-14-56 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-14-57 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-14-57 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-14-57 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1017 ms
+  2019-06-26-01-14-58 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-14-58 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-14-58 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-14-58 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-14-58 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-14-58 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.504 seconds (JVM running for 23.074)
+  2019-06-26-01-15-04 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-15-04 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 9 ms
+  2019-06-26-01-15-12 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game WHERE id = ? 
+  2019-06-26-01-15-12 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==> Parameters: 1(Integer)
+  2019-06-26-01-15-12 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - <==      Total: 1
+  2019-06-26-01-15-31 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-15-31 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-15-31 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-15-31 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 100(Long)
+  2019-06-26-01-15-31 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-16-10 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.updateById] [DEBUG] - ==>  Preparing: UPDATE game SET pp=? WHERE id=? 
+  2019-06-26-01-16-10 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.updateById] [DEBUG] - ==> Parameters: 0000(String), 100(Integer)
+  2019-06-26-01-16-10 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.updateById] [DEBUG] - <==    Updates: 0
+  2019-06-26-01-16-27 [http-nio-8080-exec-8] [com.example.demo.mapper.GameMapper.updateById] [DEBUG] - ==>  Preparing: UPDATE game SET pp=? WHERE id=? 
+  2019-06-26-01-16-27 [http-nio-8080-exec-8] [com.example.demo.mapper.GameMapper.updateById] [DEBUG] - ==> Parameters: 0000(String), 1(Integer)
+  2019-06-26-01-16-27 [http-nio-8080-exec-8] [com.example.demo.mapper.GameMapper.updateById] [DEBUG] - <==    Updates: 1
+  2019-06-26-01-16-43 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-16-43 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-16-43 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-16-43 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 100(Long)
+  2019-06-26-01-16-43 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-17-00 [http-nio-8080-exec-10] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==>  Preparing: delete from bootstrap-table..game where id = ? 
+  2019-06-26-01-17-00 [http-nio-8080-exec-10] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==> Parameters: 0(Integer)
+  2019-06-26-01-17-12 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==>  Preparing: delete from bootstrap-table..game where id = ? 
+  2019-06-26-01-17-12 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==> Parameters: 1(Integer)
+  2019-06-26-01-17-16 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==>  Preparing: delete from bootstrap-table..game where id = ? 
+  2019-06-26-01-17-16 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==> Parameters: 1(Integer)
+  2019-06-26-01-17-40 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==>  Preparing: delete from bootstrap-table..game where id = ? 
+  2019-06-26-01-17-40 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==> Parameters: 1(Integer)
+  2019-06-26-01-17-47 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game WHERE id = ? 
+  2019-06-26-01-17-47 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==> Parameters: 1(Integer)
+  2019-06-26-01-17-47 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - <==      Total: 1
+  2019-06-26-01-18-02 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.insert] [DEBUG] - ==>  Preparing: insert into bootstrap-table..game (id, cn_name, jp_name, en_name, nature, generation, `power`, hirate, `type`, pp) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+  2019-06-26-01-18-02 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.insert] [DEBUG] - ==> Parameters: 100(Integer), null, null, null, null, null, null, null, null, 1111(String)
+  2019-06-26-01-18-10 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-18-10 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-18-23 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-18-39 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39699 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-18-39 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-18-39 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-18-39 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-18-39 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-18-40 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1133 ms
+  2019-06-26-01-18-40 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-18-41 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-18-41 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-18-41 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-18-41 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-18-41 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.899 seconds (JVM running for 23.449)
+  2019-06-26-01-18-46 [http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-18-46 [http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 6 ms
+  2019-06-26-01-18-46 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.insert] [DEBUG] - ==>  Preparing: insert into bootstrap-table..game (id, cn_name, jp_name, en_name, nature, generation, `power`, hirate, `type`, pp) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+  2019-06-26-01-18-46 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.insert] [DEBUG] - ==> Parameters: 100(Integer), null, null, null, null, null, null, null, null, 1111(String)
+  2019-06-26-01-19-27 [Thread-39] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-19-27 [Thread-39] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-19-34 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-19-49 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39711 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-19-49 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-19-49 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-19-50 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-19-57 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-20-12 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39716 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-20-12 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-20-12 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-20-12 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-20-13 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-20-13 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 922 ms
+  2019-06-26-01-20-13 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-20-14 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-20-14 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-20-14 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-20-14 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-20-14 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.433 seconds (JVM running for 22.922)
+  2019-06-26-01-21-55 [http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-21-55 [http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 7 ms
+  2019-06-26-01-21-56 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.insert] [DEBUG] - ==>  Preparing: insert into `game` (id, cn_name, jp_name, en_name, nature, generation, `power`, hirate, `type`, pp) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+  2019-06-26-01-21-56 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.insert] [DEBUG] - ==> Parameters: 100(Integer), null, null, null, null, null, null, null, null, 1111(String)
+  2019-06-26-01-21-56 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.insert] [DEBUG] - <==    Updates: 1
+  2019-06-26-01-22-09 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==>  Preparing: delete from `game` where id = ? 
+  2019-06-26-01-22-09 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - ==> Parameters: 100(Integer)
+  2019-06-26-01-22-09 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.deleteByPrimaryKey] [DEBUG] - <==    Updates: 1
+  2019-06-26-01-22-36 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-22-36 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-22-36 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-22-36 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 9(Long)
+  2019-06-26-01-22-36 [http-nio-8080-exec-5] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 9
+  2019-06-26-01-37-47 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-37-47 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-37-56 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-38-11 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39902 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-38-11 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-38-11 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-38-12 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-38-12 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-38-13 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1081 ms
+  2019-06-26-01-38-13 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-38-13 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-38-14 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-38-14 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-38-14 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-38-14 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.818 seconds (JVM running for 23.48)
+  2019-06-26-01-38-53 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-38-53 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 7 ms
+  2019-06-26-01-39-21 [Thread-39] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-39-21 [Thread-39] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-39-49 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-40-04 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39919 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-40-04 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-40-04 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-40-04 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-40-05 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-40-05 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 981 ms
+  2019-06-26-01-40-05 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+  2019-06-26-01-40-06 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-40-06 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-40-06 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-40-06 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-40-06 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-40-06 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.583 seconds (JVM running for 23.079)
+  2019-06-26-01-41-32 [http-nio-8080-exec-5] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-41-32 [http-nio-8080-exec-5] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 7 ms
+  2019-06-26-01-41-51 [http-nio-8080-exec-10] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-41-51 [http-nio-8080-exec-10] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-41-51 [http-nio-8080-exec-10] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-41-51 [http-nio-8080-exec-10] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 100(Long)
+  2019-06-26-01-41-51 [http-nio-8080-exec-10] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-42-32 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-42-32 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-42-32 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-42-32 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 100(Long)
+  2019-06-26-01-42-32 [http-nio-8080-exec-1] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-42-35 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-42-35 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-42-35 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-42-35 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 99(Long)
+  2019-06-26-01-42-35 [http-nio-8080-exec-3] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-42-46 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-42-46 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-42-46 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-42-46 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 99(Long)
+  2019-06-26-01-42-46 [http-nio-8080-exec-7] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-42-47 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-42-47 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-42-47 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-42-47 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 99(Long)
+  2019-06-26-01-42-47 [http-nio-8080-exec-4] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-42-47 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-42-47 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-42-47 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-42-47 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 99(Long)
+  2019-06-26-01-42-47 [http-nio-8080-exec-6] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-42-47 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-42-47 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-42-47 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-42-47 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 99(Long)
+  2019-06-26-01-42-47 [http-nio-8080-exec-2] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-01-47-58 [Thread-38] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-47-58 [Thread-38] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-01-48-07 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-48-40 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-48-55 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39992 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-48-55 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-48-55 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-48-55 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-48-56 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+  2019-06-26-01-48-56 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [INFO] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+  2019-06-26-01-48-56 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+  org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:228)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:721)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:534)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:12)
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.<clinit>(AbstractAspectJAdvisorFactory.java:62)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.initBeanFactory(AnnotationAwareAspectJAutoProxyCreator.java:82)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.setBeanFactory(AbstractAdvisorAutoProxyCreator.java:63)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcut
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 21 more
+2019-06-26-01-49-11 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-49-27 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 39997 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-49-27 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-49-27 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-49-27 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-49-27 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+  2019-06-26-01-49-27 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [INFO] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+  2019-06-26-01-49-27 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+  org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:228)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:721)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:534)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:12)
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.<clinit>(AbstractAspectJAdvisorFactory.java:62)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.initBeanFactory(AnnotationAwareAspectJAutoProxyCreator.java:82)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.setBeanFactory(AbstractAdvisorAutoProxyCreator.java:63)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcut
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 21 more
+2019-06-26-01-51-11 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-01-51-26 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 40024 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-01-51-26 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-01-51-26 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-01-51-27 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-01-51-27 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-01-51-27 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1058 ms
+  2019-06-26-01-51-28 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+  2019-06-26-01-51-28 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-01-51-29 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-01-51-29 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-01-51-29 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-01-51-29 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-01-51-29 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.894 seconds (JVM running for 23.436)
+  2019-06-26-01-51-58 [http-nio-8080-exec-8] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2019-06-26-01-51-58 [http-nio-8080-exec-8] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 10 ms
+  2019-06-26-01-51-58 [http-nio-8080-exec-8] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game WHERE id = ? 
+  2019-06-26-01-51-58 [http-nio-8080-exec-8] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - ==> Parameters: 1(Integer)
+  2019-06-26-01-51-58 [http-nio-8080-exec-8] [com.example.demo.mapper.GameMapper.selectOne] [DEBUG] - <==      Total: 1
+  2019-06-26-01-52-30 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT COUNT(1) FROM game 
+  2019-06-26-01-52-30 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 
+  2019-06-26-01-52-30 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==>  Preparing: SELECT id,cn_name,jp_name,en_name,nature,generation,power,hirate,type,pp FROM game LIMIT ?,? 
+  2019-06-26-01-52-30 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - ==> Parameters: 0(Long), 100(Long)
+  2019-06-26-01-52-30 [http-nio-8080-exec-9] [com.example.demo.mapper.GameMapper.selectPage] [DEBUG] - <==      Total: 12
+  2019-06-26-02-03-51 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.DemoApplicationTests], using SpringBootContextLoader
+  2019-06-26-02-03-51 [main] [org.springframework.test.context.support.AbstractContextLoader] [INFO] - Could not detect default resource locations for test class [com.example.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+  2019-06-26-02-03-51 [main] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO] - Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+  2019-06-26-02-03-51 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
+  2019-06-26-02-03-51 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+  2019-06-26-02-03-51 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5119fb47, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7193666c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@20deea7f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3835c46, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1dde4cb2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7714e963, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@20ce78ec, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@393671df, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@56620197, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6eda5c9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@55b7a4e0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5f058f00]
+  2019-06-26-02-03-52 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-02-04-07 [main] [com.example.demo.DemoApplicationTests] [INFO] - Starting DemoApplicationTests on CundeiMac.local with PID 40167 (started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-02-04-07 [main] [com.example.demo.DemoApplicationTests] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-02-04-07 [main] [com.example.demo.DemoApplicationTests] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-02-04-07 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-02-04-08 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+  2019-06-26-02-04-09 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-02-04-10 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-02-04-10 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-02-04-10 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-02-04-11 [main] [com.example.demo.DemoApplicationTests] [INFO] - Started DemoApplicationTests in 19.201 seconds (JVM running for 20.364)
+  2019-06-26-02-04-11 [Thread-2] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-02-04-11 [Thread-2] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-02-25-22 [Thread-39] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Shutting down ExecutorService 'applicationTaskExecutor'
+  2019-06-26-02-25-22 [Thread-39] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+  2019-06-26-02-25-32 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.17.Final
+  2019-06-26-02-25-48 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication on CundeiMac.local with PID 40380 (/Users/cunethan/Desktop/Java/demo-mybatis-plus/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-mybatis-plus)
+  2019-06-26-02-25-48 [main] [com.example.demo.DemoApplication] [DEBUG] - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+  2019-06-26-02-25-48 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2019-06-26-02-25-48 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner] [WARN] - No MyBatis mapper was found in '[com.example.mapper.*]' package. Please check your configuration.
+  2019-06-26-02-25-49 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2019-06-26-02-25-49 [main] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1028 ms
+  2019-06-26-02-25-49 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+  2019-06-26-02-25-49 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+  2019-06-26-02-25-50 [main] [com.baomidou.mybatisplus.core.injector.AbstractMethod] [WARN] - [com.example.demo.mapper.GameMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+  2019-06-26-02-25-50 [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] [INFO] - Initializing ExecutorService 'applicationTaskExecutor'
+  2019-06-26-02-25-50 [main] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [WARN] - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+  2019-06-26-02-25-50 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2019-06-26-02-25-50 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 17.61 seconds (JVM running for 23.141)
+  
