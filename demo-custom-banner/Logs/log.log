@@ -1,0 +1,66 @@
+2019-07-03 16:05:07.470  INFO 24980 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 24980 (/Users/cunethan/Desktop/Java/demo-custom-banner/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-custom-banner)
+2019-07-03 16:05:07.472 DEBUG 24980 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 16:05:07.472  INFO 24980 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 16:05:08.233  INFO 24980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 16:05:08.253  INFO 24980 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 16:05:08.253  INFO 24980 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 16:05:08.333  INFO 24980 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 16:05:08.334  INFO 24980 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 836 ms
+2019-07-03 16:05:08.529  INFO 24980 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 16:05:08.598  WARN 24980 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-03 16:05:08.696  INFO 24980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 16:05:08.699  INFO 24980 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 16.516 seconds (JVM running for 22.046)
+2019-07-03 16:05:33.873  INFO 24980 --- [Thread-36] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 16:05:45.937  INFO 24988 --- [main] o.s.boot.SpringApplication               : 
+      ___                       ___           ___           ___
+     /  /\          ___        /__/\         /  /\         /__/\
+    /  /:/_        /  /\       \  \:\       /  /::\        \  \:\
+   /  /:/ /\      /  /:/        \__\:\     /  /:/\:\        \  \:\
+  /  /:/ /:/_    /  /:/     ___ /  /::\   /  /:/~/::\   _____\__\:\
+ /__/:/ /:/ /\  /  /::\    /__/\  /:/\:\ /__/:/ /:/\:\ /__/::::::::\
+ \  \:\/:/ /:/ /__/:/\:\   \  \:\/:/__\/ \  \:\/:/__\/ \  \:\~~\~~\/
+  \  \::/ /:/  \__\/  \:\   \  \::/       \  \::/       \  \:\  ~~~
+   \  \:\/:/        \  \:\   \  \:\        \  \:\        \  \:\
+    \  \::/          \__\/    \  \:\        \  \:\        \  \:\
+     \__\/                     \__\/         \__\/         \__\/
+
+
+2019-07-03 16:05:55.982  INFO 24988 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 24988 (/Users/cunethan/Desktop/Java/demo-custom-banner/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-custom-banner)
+2019-07-03 16:05:55.983 DEBUG 24988 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 16:05:55.983  INFO 24988 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 16:05:56.890  INFO 24988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 16:05:56.912  INFO 24988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 16:05:56.912  INFO 24988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 16:05:56.994  INFO 24988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 16:05:56.995  INFO 24988 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 982 ms
+2019-07-03 16:05:57.197  INFO 24988 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 16:05:57.271  WARN 24988 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-03 16:05:57.396  INFO 24988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 16:05:57.400  INFO 24988 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 16.686 seconds (JVM running for 22.137)
+2019-07-03 16:09:44.896  INFO 24988 --- [Thread-36] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 16:09:58.340  INFO 25021 --- [main] o.s.boot.SpringApplication               : 
+      ___                       ___           ___           ___
+     /  /\          ___        /__/\         /  /\         /__/\
+    /  /:/_        /  /\       \  \:\       /  /::\        \  \:\
+   /  /:/ /\      /  /:/        \__\:\     /  /:/\:\        \  \:\
+  /  /:/ /:/_    /  /:/     ___ /  /::\   /  /:/~/::\   _____\__\:\
+ /__/:/ /:/ /\  /  /::\    /__/\  /:/\:\ /__/:/ /:/\:\ /__/::::::::\
+ \  \:\/:/ /:/ /__/:/\:\   \  \:\/:/__\/ \  \:\/:/__\/ \  \:\~~\~~\/
+  \  \::/ /:/  \__\/  \:\   \  \::/       \  \::/       \  \:\  ~~~
+   \  \:\/:/        \  \:\   \  \:\        \  \:\        \  \:\
+    \  \::/          \__\/    \  \:\        \  \:\        \  \:\
+     \__\/                     \__\/         \__\/         \__\/
+
+
+2019-07-03 16:10:08.420  INFO 25021 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 25021 (/Users/cunethan/Desktop/Java/demo-custom-banner/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-custom-banner)
+2019-07-03 16:10:08.420 DEBUG 25021 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 16:10:08.421  INFO 25021 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 16:10:09.231  INFO 25021 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 16:10:09.255  INFO 25021 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 16:10:09.255  INFO 25021 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 16:10:09.329  INFO 25021 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 16:10:09.330  INFO 25021 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 843 ms
+2019-07-03 16:10:09.519  INFO 25021 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 16:10:09.593  WARN 25021 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-03 16:10:09.692  INFO 25021 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 16:10:09.696  INFO 25021 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 16.617 seconds (JVM running for 22.083)
