@@ -97,3 +97,62 @@
 2019-07-03 14:28:48.530 DEBUG 23668 --- [http-nio-8080-exec-1] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
 2019-07-03 14:28:48.552 DEBUG 23668 --- [http-nio-8080-exec-1] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
 2019-07-03 14:29:17.773  INFO 23668 --- [http-nio-8080-exec-3] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:61846 token:null
+2019-07-03 15:28:26.747  INFO 23668 --- [http-nio-8080-exec-10] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:62604 token:null
+2019-07-03 15:29:12.905  INFO 23668 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 15:29:12.907  INFO 23668 --- [Thread-38] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-03 15:29:37.105  INFO 24476 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 24476 (/Users/cunethan/Desktop/Java/demo-jwt/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-jwt)
+2019-07-03 15:29:37.107 DEBUG 24476 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 15:29:37.108  INFO 24476 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 15:29:38.066  INFO 24476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 15:29:38.084  INFO 24476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 15:29:38.084  INFO 24476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 15:29:38.176  INFO 24476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 15:29:38.595  INFO 24476 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 15:29:38.887  INFO 24476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 15:29:38.890  INFO 24476 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.069 seconds (JVM running for 22.683)
+2019-07-03 15:29:51.416  INFO 24476 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 15:29:51.434  INFO 24476 --- [http-nio-8080-exec-2] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:null
+2019-07-03 15:30:04.766  INFO 24476 --- [http-nio-8080-exec-3] c.e.demo.controller.UserController       : requestURI:/api/user/login reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:null
+2019-07-03 15:30:04.871  INFO 24476 --- [http-nio-8080-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-03 15:30:05.255 DEBUG 24476 --- [http-nio-8080-exec-3] c.e.d.d.UserMapper.findUserWithUserName  : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-03 15:30:05.277 DEBUG 24476 --- [http-nio-8080-exec-3] c.e.d.d.UserMapper.findUserWithUserName  : ==> Parameters: zhangsan(String)
+2019-07-03 15:30:05.295 DEBUG 24476 --- [http-nio-8080-exec-3] c.e.d.d.UserMapper.findUserWithUserName  : <==      Total: 1
+2019-07-03 15:30:05.321 DEBUG 24476 --- [http-nio-8080-exec-3] c.e.demo.dao.UserMapper.updateToken      : ==>  Preparing: update `t_user` set token=? where id=? 
+2019-07-03 15:30:05.321 DEBUG 24476 --- [http-nio-8080-exec-3] c.e.demo.dao.UserMapper.updateToken      : ==> Parameters: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE5MzA2NX0.N904GhalT20RHBeySvq-vYmNA_CxJQhJnCc8xJZ0i_8(String), 34(Integer)
+2019-07-03 15:30:05.366 DEBUG 24476 --- [http-nio-8080-exec-3] c.e.demo.dao.UserMapper.updateToken      : <==    Updates: 1
+2019-07-03 15:30:15.731  INFO 24476 --- [http-nio-8080-exec-4] c.e.demo.controller.UserController       : requestURI:/testBase64Encode reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE2OTYwNH0.mn1HCXAlokY7sn2jdoelpEDn_FrFXSI2gc4YNa6N3U4
+2019-07-03 15:30:15.735  INFO 24476 --- [http-nio-8080-exec-4] c.e.demo.controller.UserController       : requestURI:/error reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE2OTYwNH0.mn1HCXAlokY7sn2jdoelpEDn_FrFXSI2gc4YNa6N3U4
+2019-07-03 15:30:24.249  INFO 24476 --- [http-nio-8080-exec-5] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE3NzgxMH0.cnda4_rUq65C2uLuVPmfHcd4DBqb1zSXJNNdN2BBLJ8
+2019-07-03 15:30:24.270 DEBUG 24476 --- [http-nio-8080-exec-5] c.e.demo.dao.UserMapper.findUserWithId   : ==>  Preparing: select * from `t_user` where id=? 
+2019-07-03 15:30:24.270 DEBUG 24476 --- [http-nio-8080-exec-5] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
+2019-07-03 15:30:24.271 DEBUG 24476 --- [http-nio-8080-exec-5] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
+2019-07-03 15:30:55.461  INFO 24476 --- [http-nio-8080-exec-6] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE5MzA2NX0.N904GhalT20RHBeySvq-vYmNA_CxJQhJnCc8xJZ0i_8
+2019-07-03 15:30:55.463 DEBUG 24476 --- [http-nio-8080-exec-6] c.e.demo.dao.UserMapper.findUserWithId   : ==>  Preparing: select * from `t_user` where id=? 
+2019-07-03 15:30:55.463 DEBUG 24476 --- [http-nio-8080-exec-6] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
+2019-07-03 15:30:55.465 DEBUG 24476 --- [http-nio-8080-exec-6] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
+2019-07-03 15:31:01.942  INFO 24476 --- [http-nio-8080-exec-7] c.e.demo.controller.UserController       : requestURI:/api/user/login reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:null
+2019-07-03 15:31:01.943 DEBUG 24476 --- [http-nio-8080-exec-7] c.e.d.d.UserMapper.findUserWithUserName  : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-03 15:31:01.944 DEBUG 24476 --- [http-nio-8080-exec-7] c.e.d.d.UserMapper.findUserWithUserName  : ==> Parameters: zhangsan(String)
+2019-07-03 15:31:01.945 DEBUG 24476 --- [http-nio-8080-exec-7] c.e.d.d.UserMapper.findUserWithUserName  : <==      Total: 1
+2019-07-03 15:31:01.946 DEBUG 24476 --- [http-nio-8080-exec-7] c.e.demo.dao.UserMapper.updateToken      : ==>  Preparing: update `t_user` set token=? where id=? 
+2019-07-03 15:31:01.947 DEBUG 24476 --- [http-nio-8080-exec-7] c.e.demo.dao.UserMapper.updateToken      : ==> Parameters: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE5MzEyMX0.DuwUveRDDsq-owFlul4J8BC7AYmOJT854w23l_1sHJ0(String), 34(Integer)
+2019-07-03 15:31:01.949 DEBUG 24476 --- [http-nio-8080-exec-7] c.e.demo.dao.UserMapper.updateToken      : <==    Updates: 1
+2019-07-03 15:31:04.960  INFO 24476 --- [http-nio-8080-exec-8] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE5MzA2NX0.N904GhalT20RHBeySvq-vYmNA_CxJQhJnCc8xJZ0i_8
+2019-07-03 15:31:04.962 DEBUG 24476 --- [http-nio-8080-exec-8] c.e.demo.dao.UserMapper.findUserWithId   : ==>  Preparing: select * from `t_user` where id=? 
+2019-07-03 15:31:04.962 DEBUG 24476 --- [http-nio-8080-exec-8] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
+2019-07-03 15:31:04.964 DEBUG 24476 --- [http-nio-8080-exec-8] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
+2019-07-03 15:31:51.612  INFO 24476 --- [http-nio-8080-exec-9] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:62640 token:null
+2019-07-03 15:32:47.152  INFO 24476 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 15:32:47.156  INFO 24476 --- [Thread-37] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-03 15:33:10.562  INFO 24505 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 24505 (/Users/cunethan/Desktop/Java/demo-jwt/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-jwt)
+2019-07-03 15:33:10.564 DEBUG 24505 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 15:33:10.564  INFO 24505 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 15:33:11.346  INFO 24505 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 15:33:11.363  INFO 24505 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 15:33:11.364  INFO 24505 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 15:33:11.438  INFO 24505 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 15:33:11.825  INFO 24505 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 15:33:12.109  INFO 24505 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 15:33:12.112  INFO 24505 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 16.813 seconds (JVM running for 22.286)
+2019-07-03 15:33:28.726  INFO 24505 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 15:33:28.743  INFO 24505 --- [http-nio-8080-exec-1] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:62685 token:null

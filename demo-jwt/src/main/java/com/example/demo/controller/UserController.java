@@ -5,19 +5,15 @@ import com.example.demo.Service.UserService;
 import com.example.demo.common.BaseModel;
 import com.example.demo.common.annotations.PassToken;
 import com.example.demo.common.annotations.UserLoginToken;
-import com.example.demo.common.utils.ByteConvertHelper;
 import com.example.demo.common.utils.MD5Utils;
 import com.example.demo.entity.User;
-import com.mysql.cj.log.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sun.tools.java.ClassPath;
 
 import javax.annotation.Resource;
-import java.util.Base64;
-import java.util.logging.Logger;
+
 
 @Validated
 @Controller

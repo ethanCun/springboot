@@ -100,7 +100,7 @@ public class AuthenticationInteceptor implements HandlerInterceptor {
             if (userLoginToken.required()) {
 
                 if (token == null) {
-                    throw new RuntimeException("无token,请重新登录");
+                    throw new CustomException(HttpStatusEnum.TokenIsNull);
                 }
 
                 //获取本次token中的用户id

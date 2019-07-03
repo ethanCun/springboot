@@ -2,11 +2,7 @@ package com.example.demo.entity;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
