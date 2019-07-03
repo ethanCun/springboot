@@ -1,0 +1,99 @@
+2019-07-03 11:27:49.899  INFO 22488 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 22488 (/Users/cunethan/Desktop/Java/demo-jwt/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-jwt)
+2019-07-03 11:27:49.900 DEBUG 22488 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 11:27:49.901  INFO 22488 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 11:27:50.792  INFO 22488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 11:27:50.808  INFO 22488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 11:27:50.809  INFO 22488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 11:27:50.896  INFO 22488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 11:27:51.293  INFO 22488 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 11:27:51.578  INFO 22488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 11:27:51.581  INFO 22488 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 16.966 seconds (JVM running for 22.496)
+2019-07-03 11:28:12.211  INFO 22488 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 11:28:12.230  INFO 22488 --- [http-nio-8080-exec-2] c.e.demo.controller.UserController       : contextPath: method:GET token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE3NzgxMH0.cnda4_rUq65C2uLuVPmfHcd4DBqb1zSXJNNdN2BBLJ8
+2019-07-03 11:28:12.308  INFO 22488 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-03 11:28:12.721 DEBUG 22488 --- [http-nio-8080-exec-2] c.e.demo.dao.UserMapper.findUserWithId   : ==>  Preparing: select * from `t_user` where id=? 
+2019-07-03 11:28:12.739 DEBUG 22488 --- [http-nio-8080-exec-2] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
+2019-07-03 11:28:12.758 DEBUG 22488 --- [http-nio-8080-exec-2] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
+2019-07-03 11:28:36.472  INFO 22488 --- [http-nio-8080-exec-3] c.e.demo.controller.UserController       : contextPath: method:GET token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE3NzgxMH0.cnda4_rUq65C2uLuVPmfHcd4DBqb1zSXJNNdN2BBLJ8
+2019-07-03 11:28:36.475 DEBUG 22488 --- [http-nio-8080-exec-3] c.e.demo.dao.UserMapper.findUserWithId   : ==>  Preparing: select * from `t_user` where id=? 
+2019-07-03 11:28:36.475 DEBUG 22488 --- [http-nio-8080-exec-3] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
+2019-07-03 11:28:36.477 DEBUG 22488 --- [http-nio-8080-exec-3] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
+2019-07-03 13:54:04.009  INFO 22488 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 13:54:04.010  INFO 22488 --- [Thread-37] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-03 13:54:28.470  INFO 23422 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 23422 (/Users/cunethan/Desktop/Java/demo-jwt/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-jwt)
+2019-07-03 13:54:28.486 DEBUG 23422 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 13:54:28.486  INFO 23422 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 13:54:29.496  INFO 23422 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 13:54:29.513  INFO 23422 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 13:54:29.514  INFO 23422 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 13:54:29.631  INFO 23422 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 13:54:30.034  INFO 23422 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 13:54:30.320  INFO 23422 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 13:54:30.323  INFO 23422 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.137 seconds (JVM running for 22.788)
+2019-07-03 13:55:19.223  INFO 23422 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 13:55:19.261  INFO 23422 --- [http-nio-8080-exec-1] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:61227 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE3NzgxMH0.cnda4_rUq65C2uLuVPmfHcd4DBqb1zSXJNNdN2BBLJ8
+2019-07-03 13:55:19.353  INFO 23422 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-03 13:55:19.774 DEBUG 23422 --- [http-nio-8080-exec-1] c.e.demo.dao.UserMapper.findUserWithId   : ==>  Preparing: select * from `t_user` where id=? 
+2019-07-03 13:55:19.793 DEBUG 23422 --- [http-nio-8080-exec-1] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
+2019-07-03 13:55:19.813 DEBUG 23422 --- [http-nio-8080-exec-1] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
+2019-07-03 14:01:51.587  INFO 23422 --- [http-nio-8080-exec-5] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:61267 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE3NzgxMH0.cnda4_rUq65C2uLuVPmfHcd4DBqb1zSXJNNdN2BBLJ8
+2019-07-03 14:01:51.595 DEBUG 23422 --- [http-nio-8080-exec-5] c.e.demo.dao.UserMapper.findUserWithId   : ==>  Preparing: select * from `t_user` where id=? 
+2019-07-03 14:01:51.595 DEBUG 23422 --- [http-nio-8080-exec-5] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
+2019-07-03 14:01:51.597 DEBUG 23422 --- [http-nio-8080-exec-5] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
+2019-07-03 14:04:09.566  INFO 23422 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 14:04:09.569  INFO 23422 --- [Thread-37] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-03 14:04:49.266  INFO 23486 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 23486 (/Users/cunethan/Desktop/Java/demo-jwt/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-jwt)
+2019-07-03 14:04:49.268 DEBUG 23486 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 14:04:49.269  INFO 23486 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 14:04:50.681  INFO 23486 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 14:04:50.702  INFO 23486 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 14:04:50.702  INFO 23486 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 14:04:50.800  INFO 23486 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 14:04:51.425  INFO 23486 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 14:04:51.714  INFO 23486 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 14:04:51.718  INFO 23486 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.844 seconds (JVM running for 23.504)
+2019-07-03 14:04:56.679  INFO 23486 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 14:15:55.676  INFO 23486 --- [http-nio-8080-exec-2] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:61302 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE3NzgxMH0.cnda4_rUq65C2uLuVPmfHcd4DBqb1zSXJNNdN2BBLJ8
+2019-07-03 14:15:55.779  INFO 23486 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-03 14:15:55.922  INFO 23486 --- [Thread-39] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 14:15:55.924  INFO 23486 --- [Thread-39] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-03 14:16:31.276  INFO 23587 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 23587 (/Users/cunethan/Desktop/Java/demo-jwt/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-jwt)
+2019-07-03 14:16:31.279 DEBUG 23587 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 14:16:31.279  INFO 23587 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 14:16:33.598  INFO 23587 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 14:16:33.619  INFO 23587 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 14:16:33.619  INFO 23587 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 14:16:33.716  INFO 23587 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 14:16:34.301  INFO 23587 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 14:16:34.586  INFO 23587 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 14:16:34.591  INFO 23587 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 18.725 seconds (JVM running for 24.413)
+2019-07-03 14:17:18.461  INFO 23587 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 14:26:48.556  INFO 23587 --- [http-nio-8080-exec-2] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:61671 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE3NzgxMH0.cnda4_rUq65C2uLuVPmfHcd4DBqb1zSXJNNdN2BBLJ8
+2019-07-03 14:26:48.671  INFO 23587 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-03 14:26:48.788  INFO 23587 --- [Thread-41] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 14:26:48.790  INFO 23587 --- [Thread-41] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-03 14:27:14.790  INFO 23661 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 23661 (/Users/cunethan/Desktop/Java/demo-jwt/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-jwt)
+2019-07-03 14:27:14.803 DEBUG 23661 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 14:27:14.804  INFO 23661 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 14:27:15.863  INFO 23661 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 14:27:15.881  INFO 23661 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 14:27:15.881  INFO 23661 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 14:27:15.990  INFO 23661 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 14:27:16.472  INFO 23661 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 14:27:54.579  INFO 23668 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 23668 (/Users/cunethan/Desktop/Java/demo-jwt/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-jwt)
+2019-07-03 14:27:54.594 DEBUG 23668 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 14:27:54.595  INFO 23668 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-03 14:27:55.776  INFO 23668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-03 14:27:55.798  INFO 23668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-03 14:27:55.798  INFO 23668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 14:27:55.925  INFO 23668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-03 14:27:56.526  INFO 23668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 14:27:56.804  INFO 23668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 14:27:56.809  INFO 23668 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.642 seconds (JVM running for 23.4)
+2019-07-03 14:28:03.021  INFO 23668 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 14:28:47.657  INFO 23668 --- [http-nio-8080-exec-1] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:61832 token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNCIsImV4cCI6MTU2MjE3NzgxMH0.cnda4_rUq65C2uLuVPmfHcd4DBqb1zSXJNNdN2BBLJ8
+2019-07-03 14:28:47.903  INFO 23668 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-03 14:28:48.508 DEBUG 23668 --- [http-nio-8080-exec-1] c.e.demo.dao.UserMapper.findUserWithId   : ==>  Preparing: select * from `t_user` where id=? 
+2019-07-03 14:28:48.530 DEBUG 23668 --- [http-nio-8080-exec-1] c.e.demo.dao.UserMapper.findUserWithId   : ==> Parameters: 34(String)
+2019-07-03 14:28:48.552 DEBUG 23668 --- [http-nio-8080-exec-1] c.e.demo.dao.UserMapper.findUserWithId   : <==      Total: 1
+2019-07-03 14:29:17.773  INFO 23668 --- [http-nio-8080-exec-3] c.e.demo.controller.UserController       : requestURI:/api/user/test1 reuestAddress:0:0:0:0:0:0:0:1 requestPort:61846 token:null
