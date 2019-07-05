@@ -1,0 +1,247 @@
+2019-07-05 14:48:25.212  INFO 55507 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 55507 (/Users/cunethan/Desktop/Java/demo-redis-tokenValidate/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-redis-tokenValidate)
+2019-07-05 14:48:25.214 DEBUG 55507 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-05 14:48:25.215  INFO 55507 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-05 14:48:25.748  INFO 55507 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-05 14:48:25.750  INFO 55507 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-05 14:48:25.772  INFO 55507 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-07-05 14:48:26.034  INFO 55507 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e07b12dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-05 14:48:26.243  INFO 55507 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-05 14:48:26.267  INFO 55507 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-05 14:48:26.267  INFO 55507 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-05 14:48:26.346  INFO 55507 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-05 14:48:26.347  INFO 55507 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1102 ms
+2019-07-05 14:48:27.009  INFO 55507 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-05 14:48:27.096  WARN 55507 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-05 14:48:27.333  INFO 55507 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-05 14:48:27.336  INFO 55507 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.42 seconds (JVM running for 22.9)
+2019-07-05 14:48:57.370  INFO 55507 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-05 14:48:57.380  INFO 55507 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-05 14:48:57.388  INFO 55507 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-07-05 14:48:57.518  INFO 55507 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-05 14:48:57.934 DEBUG 55507 --- [http-nio-8080-exec-2] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 14:48:57.952 DEBUG 55507 --- [http-nio-8080-exec-2] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 14:48:57.971 DEBUG 55507 --- [http-nio-8080-exec-2] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 14:48:58.118  INFO 55507 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-05 14:48:58.119  INFO 55507 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-05 14:49:03.219  INFO 55507 --- [http-nio-8080-exec-2] c.e.demo.app.controller.UserController   : 缓存到redis成功 userid = 35token = GMCHrclMhEHHA7HleXu5BuYm5UESQiwsp+IOLlOu33CQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 14:49:06.314 ERROR 55507 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: token不能为空] with root cause
+
+java.lang.RuntimeException: token不能为空
+	at com.example.demo.common.Config.AuthenticationInteceptor.preHandle(AuthenticationInteceptor.java:50) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1034) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_201]
+
+2019-07-05 14:49:09.962  INFO 55507 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-05 14:49:09.966  INFO 55507 --- [Thread-38] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-05 14:53:51.555  INFO 55550 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 55550 (/Users/cunethan/Desktop/Java/demo-redis-tokenValidate/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-redis-tokenValidate)
+2019-07-05 14:53:51.557 DEBUG 55550 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-05 14:53:51.557  INFO 55550 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-05 14:53:52.016  INFO 55550 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-05 14:53:52.018  INFO 55550 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-05 14:53:52.040  INFO 55550 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-07-05 14:53:52.279  INFO 55550 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b2f5bd50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-05 14:53:52.475  INFO 55550 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-05 14:53:52.493  INFO 55550 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-05 14:53:52.493  INFO 55550 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-05 14:53:52.570  INFO 55550 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-05 14:53:52.570  INFO 55550 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 984 ms
+2019-07-05 14:53:53.214  INFO 55550 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-05 14:53:53.302  WARN 55550 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-05 14:53:53.565  INFO 55550 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-05 14:53:53.569  INFO 55550 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.28 seconds (JVM running for 22.743)
+2019-07-05 14:55:23.026  INFO 55550 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-05 14:55:46.239  INFO 55564 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 55564 (/Users/cunethan/Desktop/Java/demo-redis-tokenValidate/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-redis-tokenValidate)
+2019-07-05 14:55:46.241 DEBUG 55564 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-05 14:55:46.241  INFO 55564 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-05 14:55:46.714  INFO 55564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-05 14:55:46.715  INFO 55564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-05 14:55:46.738  INFO 55564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-07-05 14:55:46.972  INFO 55564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d4a84f33] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-05 14:55:47.177  INFO 55564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-05 14:55:47.196  INFO 55564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-05 14:55:47.197  INFO 55564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-05 14:55:47.269  INFO 55564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-05 14:55:47.270  INFO 55564 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 999 ms
+2019-07-05 14:55:47.886  INFO 55564 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-05 14:55:47.974  WARN 55564 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-05 14:55:48.212  INFO 55564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-05 14:55:48.216  INFO 55564 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.246 seconds (JVM running for 22.732)
+2019-07-05 14:55:56.497  INFO 55564 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-05 14:55:56.498  INFO 55564 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-05 14:55:56.506  INFO 55564 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-07-05 14:56:09.062  INFO 55564 --- [http-nio-8080-exec-3] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-05 14:56:09.064  INFO 55564 --- [http-nio-8080-exec-3] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-05 14:57:23.969  INFO 55564 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-05 14:57:48.030  INFO 55579 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 55579 (/Users/cunethan/Desktop/Java/demo-redis-tokenValidate/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-redis-tokenValidate)
+2019-07-05 14:57:48.032 DEBUG 55579 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-05 14:57:48.032  INFO 55579 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-05 14:57:48.497  INFO 55579 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-05 14:57:48.498  INFO 55579 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-05 14:57:48.520  INFO 55579 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-07-05 14:57:48.754  INFO 55579 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b2006fcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-05 14:57:48.951  INFO 55579 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-05 14:57:48.969  INFO 55579 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-05 14:57:48.969  INFO 55579 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-05 14:57:49.042  INFO 55579 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-05 14:57:49.042  INFO 55579 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 983 ms
+2019-07-05 14:57:49.653  INFO 55579 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-05 14:57:49.742  WARN 55579 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-05 14:57:49.977  INFO 55579 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-05 14:57:49.980  INFO 55579 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.214 seconds (JVM running for 22.698)
+2019-07-05 14:57:56.415  INFO 55579 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-05 14:57:56.416  INFO 55579 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-05 14:57:56.425  INFO 55579 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-07-05 14:58:06.748  INFO 55579 --- [http-nio-8080-exec-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-05 14:58:06.894 DEBUG 55579 --- [http-nio-8080-exec-4] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 14:58:06.915 DEBUG 55579 --- [http-nio-8080-exec-4] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 14:58:06.938 DEBUG 55579 --- [http-nio-8080-exec-4] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 14:58:07.111  INFO 55579 --- [http-nio-8080-exec-4] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-05 14:58:07.112  INFO 55579 --- [http-nio-8080-exec-4] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-05 14:58:12.218  INFO 55579 --- [http-nio-8080-exec-4] c.e.demo.app.controller.UserController   : 缓存到redis成功 userid = 35token = FRsud74JCodFUFIygDv9c960SoIFuLtJVLcVRCRYL9qQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 14:58:29.165 DEBUG 55579 --- [http-nio-8080-exec-8] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 14:58:29.189 DEBUG 55579 --- [http-nio-8080-exec-8] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 14:58:29.191 DEBUG 55579 --- [http-nio-8080-exec-8] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 14:58:29.192  INFO 55579 --- [http-nio-8080-exec-8] c.e.demo.app.controller.UserController   : 缓存到redis成功 userid = 35token = 1NbV/9ETx2ExBVRuMyDds6QgfmLdZAuJM1T+yIQcGVuQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 15:17:53.489  INFO 55579 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-05 15:17:53.508  INFO 55579 --- [Thread-37] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-05 15:18:25.121  INFO 55858 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 55858 (/Users/cunethan/Desktop/Java/demo-redis-tokenValidate/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-redis-tokenValidate)
+2019-07-05 15:18:25.136 DEBUG 55858 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-05 15:18:25.137  INFO 55858 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-05 15:18:25.600  INFO 55858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-05 15:18:25.602  INFO 55858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-05 15:18:25.623  INFO 55858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-07-05 15:18:25.864  INFO 55858 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7e843c7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-05 15:18:26.076  INFO 55858 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-05 15:18:26.095  INFO 55858 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-05 15:18:26.095  INFO 55858 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-05 15:18:26.167  INFO 55858 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-05 15:18:26.167  INFO 55858 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1003 ms
+2019-07-05 15:18:26.808  INFO 55858 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-05 15:18:26.902  WARN 55858 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-05 15:18:27.151  INFO 55858 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-05 15:18:27.154  INFO 55858 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.311 seconds (JVM running for 22.886)
+2019-07-05 15:18:33.651  INFO 55858 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-05 15:18:33.661  INFO 55858 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-05 15:18:33.668  INFO 55858 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-07-05 15:18:34.280  INFO 55858 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-05 15:18:34.281  INFO 55858 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-05 15:18:55.404  INFO 55858 --- [http-nio-8080-exec-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-05 15:18:55.560 DEBUG 55858 --- [http-nio-8080-exec-5] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 15:18:55.579 DEBUG 55858 --- [http-nio-8080-exec-5] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 15:18:55.601 DEBUG 55858 --- [http-nio-8080-exec-5] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 15:18:55.610  INFO 55858 --- [http-nio-8080-exec-5] c.e.demo.app.service.imp.UserServiceImp  : 缓存到redis成功 userid = 35token = lga+YyXPf4CQVcfo9UylRymmrwV60hRIiUojri5n2IGQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 15:21:41.081 DEBUG 55858 --- [http-nio-8080-exec-3] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 15:21:41.082 DEBUG 55858 --- [http-nio-8080-exec-3] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 15:21:41.083 DEBUG 55858 --- [http-nio-8080-exec-3] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 15:21:41.085  INFO 55858 --- [http-nio-8080-exec-3] c.e.demo.app.service.imp.UserServiceImp  : 缓存到redis成功 userid = 35token = QcjS3+cpM3/iEhdZzovuwMx1MYaL8WoJjCW0kMyQ3fGQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 15:24:48.816  INFO 55858 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-05 15:24:48.819  INFO 55858 --- [Thread-38] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-05 15:25:13.422  INFO 55908 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 55908 (/Users/cunethan/Desktop/Java/demo-redis-tokenValidate/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-redis-tokenValidate)
+2019-07-05 15:25:13.424 DEBUG 55908 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-05 15:25:13.424  INFO 55908 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-05 15:25:13.919  INFO 55908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-05 15:25:13.920  INFO 55908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-05 15:25:13.941  INFO 55908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-07-05 15:25:14.191  INFO 55908 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4631015d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-05 15:25:14.402  INFO 55908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-05 15:25:14.422  INFO 55908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-05 15:25:14.422  INFO 55908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-05 15:25:14.497  INFO 55908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-05 15:25:14.497  INFO 55908 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1045 ms
+2019-07-05 15:25:15.134  INFO 55908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-05 15:25:15.223  WARN 55908 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-05 15:25:15.471  INFO 55908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-05 15:25:15.475  INFO 55908 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.338 seconds (JVM running for 22.852)
+2019-07-05 15:27:54.482  INFO 55908 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-05 15:27:54.495  INFO 55908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-05 15:27:54.503  INFO 55908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-07-05 15:27:54.647  INFO 55908 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-05 15:27:55.225 DEBUG 55908 --- [http-nio-8080-exec-1] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 15:27:55.245 DEBUG 55908 --- [http-nio-8080-exec-1] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 15:27:55.264 DEBUG 55908 --- [http-nio-8080-exec-1] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 15:27:55.434  INFO 55908 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-05 15:27:55.435  INFO 55908 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-05 15:28:00.542  INFO 55908 --- [http-nio-8080-exec-1] c.e.demo.app.service.imp.UserServiceImp  : 缓存到redis成功 userid = 35token = /xjZ8u7l/xin75wH3qUxHD26IpDGzH2GBgqAhbuCQmCQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 15:28:17.405  INFO 55908 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-05 15:28:18.542  INFO 55908 --- [Thread-38] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-05 15:28:44.194  INFO 55941 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on CundeiMac.local with PID 55941 (/Users/cunethan/Desktop/Java/demo-redis-tokenValidate/target/classes started by cunethan in /Users/cunethan/Desktop/Java/demo-redis-tokenValidate)
+2019-07-05 15:28:44.196 DEBUG 55941 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-05 15:28:44.196  INFO 55941 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-07-05 15:28:44.712  INFO 55941 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-05 15:28:44.713  INFO 55941 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-05 15:28:44.735  INFO 55941 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-07-05 15:28:44.980  INFO 55941 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$107a842c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-05 15:28:45.193  INFO 55941 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-05 15:28:45.212  INFO 55941 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-05 15:28:45.213  INFO 55941 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-05 15:28:45.296  INFO 55941 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-05 15:28:45.296  INFO 55941 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1073 ms
+2019-07-05 15:28:45.936  INFO 55941 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-05 15:28:46.024  WARN 55941 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-05 15:28:46.261  INFO 55941 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-05 15:28:46.264  INFO 55941 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 17.346 seconds (JVM running for 22.98)
+2019-07-05 15:29:19.060  INFO 55941 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-05 15:29:19.061  INFO 55941 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-05 15:29:19.069  INFO 55941 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-07-05 15:29:24.792  INFO 55941 --- [http-nio-8080-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-05 15:29:24.931 DEBUG 55941 --- [http-nio-8080-exec-3] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 15:29:24.951 DEBUG 55941 --- [http-nio-8080-exec-3] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 15:29:24.971 DEBUG 55941 --- [http-nio-8080-exec-3] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 15:29:25.081  INFO 55941 --- [http-nio-8080-exec-3] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-05 15:29:25.082  INFO 55941 --- [http-nio-8080-exec-3] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-05 15:29:30.200  INFO 55941 --- [http-nio-8080-exec-3] c.e.demo.app.service.imp.UserServiceImp  : 缓存到redis成功 userid = 35token = yMOB2Vj72CKhqRnmTjC/30hh4wnnyQvEnfdlvRHg4c6QP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 15:29:42.422 DEBUG 55941 --- [http-nio-8080-exec-5] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 15:29:42.423 DEBUG 55941 --- [http-nio-8080-exec-5] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 15:29:42.424 DEBUG 55941 --- [http-nio-8080-exec-5] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 15:29:42.426  INFO 55941 --- [http-nio-8080-exec-5] c.e.demo.app.service.imp.UserServiceImp  : 缓存到redis成功 userid = 35token = yMOB2Vj72CKhqRnmTjC/3/0Pw8U66NlwBMvu9Hnj4wCQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 15:29:57.736 DEBUG 55941 --- [http-nio-8080-exec-7] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 15:29:57.750 DEBUG 55941 --- [http-nio-8080-exec-7] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 15:29:57.752 DEBUG 55941 --- [http-nio-8080-exec-7] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 15:29:57.754  INFO 55941 --- [http-nio-8080-exec-7] c.e.demo.app.service.imp.UserServiceImp  : 缓存到redis成功 userid = 35token = yMOB2Vj72CKhqRnmTjC/3wqSbIFIVL6LUZchExjNC3mQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
+2019-07-05 15:30:06.564 DEBUG 55941 --- [http-nio-8080-exec-9] c.e.d.a.d.U.getUserWithUsername          : ==>  Preparing: select * from `t_user` where username=? 
+2019-07-05 15:30:06.565 DEBUG 55941 --- [http-nio-8080-exec-9] c.e.d.a.d.U.getUserWithUsername          : ==> Parameters: czy(String)
+2019-07-05 15:30:06.566 DEBUG 55941 --- [http-nio-8080-exec-9] c.e.d.a.d.U.getUserWithUsername          : <==      Total: 1
+2019-07-05 15:30:06.568  INFO 55941 --- [http-nio-8080-exec-9] c.e.demo.app.service.imp.UserServiceImp  : 缓存到redis成功 userid = 35token = n3YssUAF+hEVmbv44UFQ3tA5yo01J+wakpq0uTMTnuGQP8a8xKkQHjdcCE5pRWwNN2pBfUzhggTmXJBZgD6/3vEpf7SxwKbQz1xi+LAZAuwOjVIRdewV5h69J0XzV91Q
