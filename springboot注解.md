@@ -1,5 +1,3 @@
-<p><a href="https://blog.csdn.net/isea533/article/details/50412212">SpringBoot静态资源处理</a></p>
-
 #### @EnableAutoConfiguration: 让spring根据结构布局自动加载各个类的注解 并进行调用
 ```
 spring通常建议我们将main方法所在的类放到一个root包下，@EnableAutoConfiguration（开启自动配置）注解通常都
