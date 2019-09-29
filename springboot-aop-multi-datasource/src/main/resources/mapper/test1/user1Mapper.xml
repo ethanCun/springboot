@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.test1.User1Dao">
+
+    <insert
+            id="saveToDb1" parameterType="com.example.demo.entity.test1.User1"
+            useGeneratedKeys="true">
+        insert into `User1` (id,name) values (#{id},#{name})
+    </insert>
+</mapper>
