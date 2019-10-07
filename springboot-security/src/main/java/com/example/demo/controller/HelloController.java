@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.User;
+import com.example.demo.entity.SysUser;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,10 +18,12 @@ public class HelloController {
     private UserService userService;
 
     @ResponseBody
-    @RequestMapping(value = "/addUser")
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public int addUser(String username, String password){
 
-        User user = new User();
+        System.out.println("username = " + username + " password = " + password);
+
+        SysUser user = new SysUser();
         user.setUsername(username);
 
         //对密码进行加密
@@ -32,16 +34,22 @@ public class HelloController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/signIn", method = RequestMethod.POST)
     public int login(String username, String password){
 
         return 0;
     }
 
-    @RequestMapping(value = "/signIn")
+    @RequestMapping(value = "/login")
     public String login(){
 
         return "login";
+    }
+
+    @RequestMapping(value = "/register")
+    public String register(){
+
+        return "register";
     }
 
     @RequestMapping(value = "/index")
@@ -55,5 +63,19 @@ public class HelloController {
     public String error(){
 
         return "error";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/admin")
+    public String admin(){
+
+        return "hello admin";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/test")
+    public String test(){
+
+        return "hello test";
     }
 }

@@ -8,7 +8,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 参考链接：https://blog.csdn.net/zhuyongru/article/details/82108543
- *
  * */
 
 @SpringBootApplication

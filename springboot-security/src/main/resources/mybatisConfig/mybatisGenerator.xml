@@ -35,8 +35,8 @@
             <property name="enableSubPackages" value="false"></property>
         </javaClientGenerator>
 
-        <table tableName="user"
-               catalog="test" enableSelectByPrimaryKey="true" enableSelectByExample="true"
+        <table tableName="sys_user_role"
+               catalog="springboot-security" enableSelectByPrimaryKey="true" enableSelectByExample="true"
                enableDeleteByExample="true" enableUpdateByExample="true"
                enableCountByExample="true" enableDeleteByPrimaryKey="true"
                enableInsert="true" enableUpdateByPrimaryKey="true">
