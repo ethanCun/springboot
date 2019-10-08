@@ -1,17 +1,21 @@
 package com.example.demo.config;
 
+import com.example.demo.exception.CustomException;
+import com.example.demo.exception.HttpStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.access.SecurityMetadataSource;
 import org.springframework.security.access.intercept.AbstractSecurityInterceptor;
 import org.springframework.security.access.intercept.InterceptorStatusToken;
+import org.springframework.security.authentication.*;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.FilterInvocation;
+import org.springframework.security.web.WebAttributes;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
-import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
@@ -43,6 +47,10 @@ public class MyFilterSecurityInterceptor extends AbstractSecurityInterceptor imp
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
 
+        HttpServletRequest httpServletRequest = (HttpServletRequest)request;
+
+        handleExceptions(httpServletRequest);
+
         FilterInvocation filterInvocation = new FilterInvocation(request, response, chain);
 
         invoke(filterInvocation);
@@ -62,6 +70,38 @@ public class MyFilterSecurityInterceptor extends AbstractSecurityInterceptor imp
 
         }finally {
             super.afterInvocation(token, null);
+        }
+    }
+
+    //捕捉异常
+    public void handleExceptions(HttpServletRequest request){
+
+        AuthenticationException authenticationException
+                = (AuthenticationException) request.getSession().
+                getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+
+        System.out.println("authenticationException = " + authenticationException);
+
+        if (authenticationException instanceof UsernameNotFoundException
+                || authenticationException instanceof BadCredentialsException){
+
+            throw new CustomException(HttpStatusEnum.UsernamePasswordNotRight);
+
+        }else if ((authenticationException instanceof DisabledException)){
+
+            throw new CustomException(HttpStatusEnum.UsernameDisabled);
+
+        }else if (authenticationException instanceof LockedException){
+
+            throw new CustomException(HttpStatusEnum.UsernameLocked);
+
+        }else if (authenticationException instanceof AccountExpiredException){
+
+            throw new CustomException(HttpStatusEnum.UsernameExpired);
+
+        }else if (authenticationException instanceof CredentialsExpiredException){
+
+            throw new CustomException(HttpStatusEnum.CredenCtialExpired);
         }
     }
 

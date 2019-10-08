@@ -11,10 +11,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.security.web.authentication.switchuser.SwitchUserFilter;
+import org.springframework.security.web.session.HttpSessionEventPublisher;
 
 import javax.sql.DataSource;
 
@@ -29,7 +32,7 @@ import javax.sql.DataSource;
  */
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity //开启spring security功能
 @EnableGlobalMethodSecurity(prePostEnabled = true) //启用方法级别的权限认证
 public class securityAdapter extends WebSecurityConfigurerAdapter {
 
@@ -41,8 +44,6 @@ public class securityAdapter extends WebSecurityConfigurerAdapter {
     @Bean
     public UserService userServiceSecurity() {
 
-        System.out.println("userServiceSecurity...");
-
         return new UserServiceImp();
     }
 
@@ -51,10 +52,9 @@ public class securityAdapter extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-        System.out.println("configure AuthenticationManagerBuilder auth...");
-
         auth.userDetailsService(userServiceSecurity()).passwordEncoder(passwordEncoder());
 
+        //指定内存认证 auth.inMemoryAuthentication() 指定用户名密码角色
 //        auth.inMemoryAuthentication().withUser("ethan")
 //                .password(new BCryptPasswordEncoder().encode("123456"))
 //                .roles("role1,role2,role3");
@@ -86,8 +86,6 @@ public class securityAdapter extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
 
-        System.out.println("configure WebSecurity web...");
-
         //设置需要忽略的验证url
         web.ignoring().antMatchers("/css/**", "/img/**", "/js/**", "/images/**")
                 .antMatchers("/register")
@@ -95,80 +93,81 @@ public class securityAdapter extends WebSecurityConfigurerAdapter {
     }
 
 
-    //复写这个方法来配置 {@link HttpSecurity}.
+    //复写这个方法来配置HttpSecurity
+    //httpsecurity使用参考:https://blog.csdn.net/dawangxiong123/article/details/68960041
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        System.out.println("configure http security...");
+        //解决不允许显示在iframe的问题
+        http.headers().frameOptions().disable();
 
-//        http.httpBasic() httpBasic
-//        http.formLogin() formLogin
+        //指定角色为ROLE_USER 可以针对多个url配置多个限定角色
+        //http.authorizeRequests().antMatchers("/").hasRole("USER");
 
-        //任何用户都可以访问以下URI
-        http.headers().and().authorizeRequests().antMatchers("/login", "/", "/signIn", "register", "/addUser", "/myerror")
+        //任何用户都可以访问以下URI http.headers().disable():取消安全报文头
+        http.headers().and().authorizeRequests()
+                .antMatchers("/login", "/", "/signIn", "register", "/addUser", "/myerror")
                 .permitAll();
 
         //其他的uri都需要验证
         http.headers().and().authorizeRequests().anyRequest().authenticated();
 
+        //配置匿名访问
+        http.anonymous().authorities("ROLE_ANON");
+
         //记住密码
         //<input type="checkbox" name="remember-me" value="true">
         //前端通过控制value的值 设置是否记住密码
         http.authorizeRequests().and().rememberMe()
-                .tokenValiditySeconds(30).tokenRepository(persistentTokenRepository());
+                .tokenValiditySeconds(3600).tokenRepository(persistentTokenRepository());
 
         //表单请求
+        // 默认
+        // loginPage: /login with an HTTP get
+        // usernameParameter: username
+        // passwordParameter: password
+        // failureUrl: /login?error
+        // loginProcessingUrl: /login with an HTTP post
         http.formLogin().loginPage("/login").loginProcessingUrl("/signIn")
                 .usernameParameter("username").passwordParameter("password")
                 .defaultSuccessUrl("/index", true)
                 .failureUrl("/myerror").permitAll();
 
+        //http基本认证
+        // 例子： 此处[ROLE_ADMIN, ROLE_VIEW]不包含ROLE_HOME 所以访问basic端口不会返回内容
+        http.authorizeRequests().antMatchers("/**").hasRole("HOME").and().httpBasic();
+
         //注销 .permitAll()需要带上 表示登录页面都可以访问 不然会报错 访问不了
-        http.formLogin().and().logout().logoutUrl("/logout").logoutSuccessUrl("/login")
+        http.formLogin().and().logout().deleteCookies("remove")
+                .logoutUrl("/logout").logoutSuccessUrl("/login")
                 .invalidateHttpSession(true).permitAll();
 
-        //失效session
+        //session失效后跳转到/login
         http.sessionManagement().invalidSessionUrl("/login");
 
-        //跨域
+        //maximumSessions(1)当前只有一个用户登录 再登陆时会被第一个用户会被挤下去
+        //当使用SessionManagementConfigurer的maximumSessio(int)时不要忘记为应用配置HttpSessionEventPublisher，
+        // 这样能保证过期的session能够被清除。
+        http.sessionManagement().maximumSessions(1).expiredUrl("/login");
+
+        //配置每个请求都为https
+        //http.requiresChannel().anyRequest().requiresSecure();
+
+        //禁止跨域请求
         http.csrf().disable();
 
-//                http
-//                .headers()
-//                .and()
-//                //授权配置
-//                .authorizeRequests()
-//                //所有请求
-//                .anyRequest()
-//                //都需要验证
-//                .authenticated()
-//                //登录路径 对应login方法
-//                .and().formLogin()
-//                .loginPage("/login") // 设置登录页面
-//                .loginProcessingUrl("/signIn") // 自定义的登录接口
-//                //登录成功后跳转到index页面
-//                .defaultSuccessUrl("/index", true).permitAll()
-//                //登录失败或者异常跳转页面
-//                .failureUrl("/myerror").permitAll() //表示错误页面任意用户可以访问
-//                //sesson失效跳转
-//                .and().sessionManagement().invalidSessionUrl("/login")
-//                //session失效时间
-//                .and().rememberMe().tokenValiditySeconds(60).rememberMeParameter("remember-me") //其实默认就是remember-me，这里可以指定更换
-//                .tokenRepository(persistentTokenRepository())// 配置数据库源
-//                //掉线之后跳转的路径
-//                .and().logout()
-//                //触发注销的操作
-//                .logoutUrl("/logout")
-//                //注销成功后跳转的url
-//                .logoutSuccessUrl("/login")
-//                //在注销时让httpsession失效
-//                .invalidateHttpSession(true)
-//                .permitAll() //表示登录页面任意用户可以访问
-//                //配置跨域请求
-//                .and().csrf().disable();
+        //配置端口跳转：配置PortMapper 下面的例子将从8080跳转到https端口8443
+        // 并且将http端口80跳转到https443端口。
+        //http.portMapper().http(8080).mapsTo(8443)
+                //.http(80).mapsTo(443);
+
+        //切换用户 表示只有admin的管理员才有切换用户的权限
+        http.authorizeRequests().antMatchers("/").hasRole("ADMIN")
+                .and().addFilterAfter(switchUserFilter(), FilterSecurityInterceptor.class);
     }
 
 
+    //token保存到数据库
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
 
@@ -181,5 +180,28 @@ public class securityAdapter extends WebSecurityConfigurerAdapter {
         //jdbcTokenRepository.setCreateTableOnStartup(true);
 
         return jdbcTokenRepository;
+    }
+
+
+    //SpringSecurity内置的session监听器
+    //SESSION 并发管理, 确保同账号只允许登录一次
+    @Bean
+    public HttpSessionEventPublisher httpSessionEventPublisher() {
+
+        return new HttpSessionEventPublisher();
+    }
+
+    //切换用户 参考链接：https://my.oschina.net/go4it/blog/1591720
+    @Bean
+    public SwitchUserFilter switchUserFilter() throws Exception{
+
+        SwitchUserFilter switchUserFilter = new SwitchUserFilter();
+
+        switchUserFilter.setUserDetailsService(userDetailsService());
+
+        //切换后用户后调用的url
+        switchUserFilter.setTargetUrl("/userExchanged");
+
+        return switchUserFilter;
     }
 }

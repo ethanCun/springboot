@@ -11,7 +11,7 @@
  Target Server Version : 80015
  File Encoding         : 65001
 
- Date: 07/10/2019 00:59:44
+ Date: 07/10/2019 20:22:34
 */
 
 SET NAMES utf8mb4;
@@ -87,16 +87,17 @@ CREATE TABLE `sys_role_permission` (
   `rid` int(5) DEFAULT NULL,
   `pid` int(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_role_permission
 -- ----------------------------
 BEGIN;
-INSERT INTO `sys_role_permission` VALUES (1, 1, 2);
-INSERT INTO `sys_role_permission` VALUES (2, 2, 2);
-INSERT INTO `sys_role_permission` VALUES (3, 2, 1);
+INSERT INTO `sys_role_permission` VALUES (3, 2, 4);
 INSERT INTO `sys_role_permission` VALUES (4, 1, 3);
+INSERT INTO `sys_role_permission` VALUES (5, 1, 1);
+INSERT INTO `sys_role_permission` VALUES (6, 1, 2);
+INSERT INTO `sys_role_permission` VALUES (7, 1, 4);
 COMMIT;
 
 -- ----------------------------
