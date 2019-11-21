@@ -2,7 +2,6 @@ package com.example.httpclient.demohttpclient.cpntroller;
 
 import com.alibaba.fastjson.JSON;
 import com.example.httpclient.demohttpclient.entity.User;
-import com.sun.javafx.fxml.builder.URLBuilder;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.config.RequestConfig;
@@ -12,6 +11,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ContentType;
+import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -22,9 +22,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.util.UriBuilder;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
@@ -483,14 +484,11 @@ public class SendController {
             //第一个文件
             String filekeys = "files";
             File file1 = new File("/Users/macofethan/Desktop/2.jpeg");
-            multipartEntityBuilder.addBinaryBody(filekeys, file1);
+            multipartEntityBuilder.addBinaryBody(filekeys, file1, ContentType.MULTIPART_FORM_DATA, URLEncoder.encode(file1.getName(), "utf-8"));
 
             //第二个文件 同一个filekeys 接收端用一个数组接受
             File file2 = new File("/Users/macofethan/Desktop/1.jpg");
             multipartEntityBuilder.addBinaryBody(filekeys, file2, ContentType.DEFAULT_BINARY, URLEncoder.encode(file2.getName(), "utf-8"));
-
-            System.out.println("file1 = " + file1.getName() + " " + file1.length());
-            System.out.println("file2 = " + file2.getName() + " " + file2.length());
 
             //其他参数
             ContentType contentType = ContentType.create("text/plain", Charset.forName("UTF-8"));
@@ -520,6 +518,68 @@ public class SendController {
 
             try {
 
+                if (httpClient != null){
+                    httpClient.close();
+                }
+                if (response != null){
+                    response.close();
+                }
+            }catch (Exception e){
+
+            }
+        }
+    }
+
+
+    /**
+     * httpclient发送二进制流
+     */
+    @GetMapping(value = "/sendIs")
+    public void sendInputStream(String name){
+
+        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+
+        List<NameValuePair> params = new ArrayList<>();
+        params.add(new BasicNameValuePair("name", name));
+
+        URI uri = null;
+
+        try {
+
+            uri = new URIBuilder().setScheme("http").setHost("localhost")
+                    .setPort(8080).setPath("is").setParameters(params).build();
+        }catch (Exception e){
+
+        }
+
+        HttpPost httpPost = new HttpPost(uri);
+
+        CloseableHttpResponse response = null;
+
+        try {
+
+            File file = new File("/Users/macofethan/Desktop/1.mp4");
+
+            InputStream is = new FileInputStream(file);
+
+            /**
+             * 输入流 传输的长度最多1m 传输的ContentType
+             */
+            InputStreamEntity inputStreamEntity = new InputStreamEntity(is, 1024*1024, ContentType.DEFAULT_BINARY);
+
+            httpPost.setEntity(inputStreamEntity);
+
+            response = httpClient.execute(httpPost);
+
+            HttpEntity responseEntity = response.getEntity();
+
+            System.out.println("响应状态： " + response.getStatusLine());
+            System.out.println("响应内容: " + EntityUtils.toString(responseEntity));
+
+        }catch (Exception e){
+
+        }finally {
+            try {
                 if (httpClient != null){
                     httpClient.close();
                 }

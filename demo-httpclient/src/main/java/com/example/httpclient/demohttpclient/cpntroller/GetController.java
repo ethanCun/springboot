@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import sun.management.Agent;
 
-import java.io.File;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 //用于测试sendcontroller发起请求的api接口
@@ -129,6 +129,38 @@ public class GetController {
                 System.out.println("文件拷贝失败：" + e.getMessage());
             }
         }
+
+        return sb.toString();
+    }
+
+
+    /***
+     * 接受httpclient传过来的二进制流
+     * @param name
+     * @param is
+     * @return
+     */
+    @PostMapping(value = "/is")
+    public String getInputStream(@RequestParam(value = "name") String name,
+                                 InputStream is) throws IOException {
+
+        StringBuffer sb = new StringBuffer();
+
+        sb.append("\nname=").append(name);
+        sb.append("\n输入流的内容为:");
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+
+        String line;
+        float length = 0;
+
+        while ((line = reader.readLine()) != null){
+
+            length += line.length();
+            sb.append(line);
+        }
+
+        System.out.println("接受到到的流长度: " + length/1024.0/1024.0 + "m");
 
         return sb.toString();
     }
