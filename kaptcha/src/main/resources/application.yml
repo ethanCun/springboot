@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  address: localhost
+
+
+# captcha
+captcha:
+  border: "yes"
+  border.color: 110,100,100
+  textproducer:
+    font:
+      color: red
+      size: 30
+      name: 体,楷体,微软雅黑
+    char:
+      length: 5
+  image:
+    width: 120
+    height: 40
+  session:
+    key: code
