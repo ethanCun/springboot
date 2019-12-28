@@ -87,6 +87,9 @@ public class CaptchaController {
 
         System.out.println("rightCode = " + rightCode + " code = " + code);
 
+        //每次调用验证api后移除session当中的验证码
+        request.getSession().removeAttribute(SessionConstant.IMAGE_CODE);
+
         if (Objects.deepEquals(code, rightCode)){
 
             return "验证码正确";
