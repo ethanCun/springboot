@@ -12,13 +12,17 @@ public interface MyJPushService {
     //广播
     boolean pushAll(PushBean pushBean);
 
+    //推送
     boolean pushIos(PushBean pushBean);
+    boolean pushIos(PushBean pushBean, String... regIds);
+    //自定义消息
+    boolean customContentIos(String content);
 
     boolean pushAndriod(PushBean pushBean);
-
-    boolean pushIos(PushBean pushBean, String... regIds);
-
     boolean pushAndriod(PushBean pushBean, String... regIds);
+    //自定义消息
+    boolean customContentAndriod(String content);
+
 
     boolean sendPush(PushPayload pushPayload);
 }

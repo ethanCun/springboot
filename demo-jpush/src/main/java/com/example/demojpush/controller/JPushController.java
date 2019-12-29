@@ -57,4 +57,14 @@ public class JPushController {
 
         System.out.println("推送结果: " + res);
     }
+
+    @ResponseBody
+    @GetMapping(value = "/customContent")
+    public void customContent(String content){
+
+        System.out.println("content = " + content);
+        boolean res = myJPushService.customContentIos(content);
+
+        System.out.println("推送结果: " + res);
+    }
 }

@@ -40,7 +40,14 @@
                  apsForProduction:NO
             advertisingIdentifier:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveMsg:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
+    
     return YES;
+}
+
+- (void)receiveMsg:(NSNotification *)msg{
+    
+    NSLog(@"msg = %@", msg.userInfo);
 }
 
 - (void)application:(UIApplication *)application

@@ -3,6 +3,7 @@ package com.example.demojpush.service.imp;
 import cn.jiguang.common.resp.APIConnectionException;
 import cn.jiguang.common.resp.APIRequestException;
 import cn.jpush.api.push.PushResult;
+import cn.jpush.api.push.model.Message;
 import cn.jpush.api.push.model.Options;
 import cn.jpush.api.push.model.Platform;
 import cn.jpush.api.push.model.PushPayload;
@@ -36,6 +37,7 @@ public class MyJPushServiceImp implements MyJPushService {
                 .setPlatform(Platform.ios())
                 .setAudience(Audience.all())
                 .setNotification(Notification.ios(pushBean.getAlert(), pushBean.getExtras()))
+
                 .build());
     }
 
@@ -67,6 +69,23 @@ public class MyJPushServiceImp implements MyJPushService {
     }
 
     @Override
+    public boolean customContentIos(String content) {
+        return sendPush(PushPayload.newBuilder().setPlatform(Platform.ios())
+                .setAudience(Audience.all())
+                .setMessage(Message.newBuilder().setMsgContent(content).build())
+                .build());
+    }
+
+    @Override
+    public boolean customContentAndriod(String content) {
+        return sendPush(PushPayload.newBuilder()
+                .setPlatform(Platform.android())
+                .setAudience(Audience.all())
+                .setMessage(Message.newBuilder().setMsgContent(content).build())
+                .build());
+    }
+
+    @Override
     public boolean sendPush(PushPayload pushPayload) {
 
         System.out.println("发送极光推送请求: " + pushPayload);
@@ -91,4 +110,6 @@ public class MyJPushServiceImp implements MyJPushService {
             return false;
         }
     }
+
+
 }
