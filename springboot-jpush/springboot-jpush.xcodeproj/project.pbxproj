@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		068DF6C023B845C800D6DB3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 068DF6BF23B845C800D6DB3D /* AppDelegate.m */; };
+		068DF6C323B845C800D6DB3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068DF6C223B845C800D6DB3D /* ViewController.m */; };
+		068DF6C623B845C800D6DB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068DF6C423B845C800D6DB3D /* Main.storyboard */; };
+		068DF6C823B845C900D6DB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 068DF6C723B845C900D6DB3D /* Assets.xcassets */; };
+		068DF6CB23B845C900D6DB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068DF6C923B845C900D6DB3D /* LaunchScreen.storyboard */; };
+		068DF6CE23B845C900D6DB3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 068DF6CD23B845C900D6DB3D /* main.m */; };
+		A08167099477BACBA0ADDA45 /* libPods-springboot-jpush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AD516322ECA21B54627601 /* libPods-springboot-jpush.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0521852628B8978A8FD90044 /* Pods-springboot-jpush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-springboot-jpush.release.xcconfig"; path = "Target Support Files/Pods-springboot-jpush/Pods-springboot-jpush.release.xcconfig"; sourceTree = "<group>"; };
+		068DF6BB23B845C800D6DB3D /* springboot-jpush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "springboot-jpush.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		068DF6BE23B845C800D6DB3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		068DF6BF23B845C800D6DB3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		068DF6C123B845C800D6DB3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		068DF6C223B845C800D6DB3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		068DF6C523B845C800D6DB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		068DF6C723B845C900D6DB3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		068DF6CA23B845C900D6DB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		068DF6CC23B845C900D6DB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		068DF6CD23B845C900D6DB3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		068DF6D423B847B800D6DB3D /* springboot-jpush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "springboot-jpush.entitlements"; sourceTree = "<group>"; };
+		3DED5DC1594C34B3A7E77D84 /* Pods-springboot-jpush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-springboot-jpush.debug.xcconfig"; path = "Target Support Files/Pods-springboot-jpush/Pods-springboot-jpush.debug.xcconfig"; sourceTree = "<group>"; };
+		83AD516322ECA21B54627601 /* libPods-springboot-jpush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-springboot-jpush.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		068DF6B823B845C800D6DB3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A08167099477BACBA0ADDA45 /* libPods-springboot-jpush.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		068DF6B223B845C800D6DB3D = {
+			isa = PBXGroup;
+			children = (
+				068DF6BD23B845C800D6DB3D /* springboot-jpush */,
+				068DF6BC23B845C800D6DB3D /* Products */,
+				3C5CC34304CDBDED0B08A7A3 /* Pods */,
+				A2F698B770E7522616029A43 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		068DF6BC23B845C800D6DB3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				068DF6BB23B845C800D6DB3D /* springboot-jpush.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		068DF6BD23B845C800D6DB3D /* springboot-jpush */ = {
+			isa = PBXGroup;
+			children = (
+				068DF6D423B847B800D6DB3D /* springboot-jpush.entitlements */,
+				068DF6BE23B845C800D6DB3D /* AppDelegate.h */,
+				068DF6BF23B845C800D6DB3D /* AppDelegate.m */,
+				068DF6C123B845C800D6DB3D /* ViewController.h */,
+				068DF6C223B845C800D6DB3D /* ViewController.m */,
+				068DF6C423B845C800D6DB3D /* Main.storyboard */,
+				068DF6C723B845C900D6DB3D /* Assets.xcassets */,
+				068DF6C923B845C900D6DB3D /* LaunchScreen.storyboard */,
+				068DF6CC23B845C900D6DB3D /* Info.plist */,
+				068DF6CD23B845C900D6DB3D /* main.m */,
+			);
+			path = "springboot-jpush";
+			sourceTree = "<group>";
+		};
+		3C5CC34304CDBDED0B08A7A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DED5DC1594C34B3A7E77D84 /* Pods-springboot-jpush.debug.xcconfig */,
+				0521852628B8978A8FD90044 /* Pods-springboot-jpush.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A2F698B770E7522616029A43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83AD516322ECA21B54627601 /* libPods-springboot-jpush.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		068DF6BA23B845C800D6DB3D /* springboot-jpush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 068DF6D123B845C900D6DB3D /* Build configuration list for PBXNativeTarget "springboot-jpush" */;
+			buildPhases = (
+				54F7A997A790B8B029CBD298 /* [CP] Check Pods Manifest.lock */,
+				068DF6B723B845C800D6DB3D /* Sources */,
+				068DF6B823B845C800D6DB3D /* Frameworks */,
+				068DF6B923B845C800D6DB3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "springboot-jpush";
+			productName = "springboot-jpush";
+			productReference = 068DF6BB23B845C800D6DB3D /* springboot-jpush.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		068DF6B323B845C800D6DB3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = macOfEthan;
+				TargetAttributes = {
+					068DF6BA23B845C800D6DB3D = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 068DF6B623B845C800D6DB3D /* Build configuration list for PBXProject "springboot-jpush" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 068DF6B223B845C800D6DB3D;
+			productRefGroup = 068DF6BC23B845C800D6DB3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				068DF6BA23B845C800D6DB3D /* springboot-jpush */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		068DF6B923B845C800D6DB3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				068DF6CB23B845C900D6DB3D /* LaunchScreen.storyboard in Resources */,
+				068DF6C823B845C900D6DB3D /* Assets.xcassets in Resources */,
+				068DF6C623B845C800D6DB3D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54F7A997A790B8B029CBD298 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-springboot-jpush-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		068DF6B723B845C800D6DB3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				068DF6C323B845C800D6DB3D /* ViewController.m in Sources */,
+				068DF6CE23B845C900D6DB3D /* main.m in Sources */,
+				068DF6C023B845C800D6DB3D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		068DF6C423B845C800D6DB3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				068DF6C523B845C800D6DB3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		068DF6C923B845C900D6DB3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				068DF6CA23B845C900D6DB3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		068DF6CF23B845C900D6DB3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		068DF6D023B845C900D6DB3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		068DF6D223B845C900D6DB3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DED5DC1594C34B3A7E77D84 /* Pods-springboot-jpush.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "springboot-jpush/springboot-jpush.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L65752DTRX;
+				INFOPLIST_FILE = "springboot-jpush/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethan.springboot-jpush";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		068DF6D323B845C900D6DB3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0521852628B8978A8FD90044 /* Pods-springboot-jpush.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "springboot-jpush/springboot-jpush.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L65752DTRX;
+				INFOPLIST_FILE = "springboot-jpush/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethan.springboot-jpush";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		068DF6B623B845C800D6DB3D /* Build configuration list for PBXProject "springboot-jpush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				068DF6CF23B845C900D6DB3D /* Debug */,
+				068DF6D023B845C900D6DB3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		068DF6D123B845C900D6DB3D /* Build configuration list for PBXNativeTarget "springboot-jpush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				068DF6D223B845C900D6DB3D /* Debug */,
+				068DF6D323B845C900D6DB3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 068DF6B323B845C800D6DB3D /* Project object */;
+}

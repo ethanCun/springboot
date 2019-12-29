@@ -1,0 +1,5 @@
+platform :ios, 10.0
+
+target 'springboot-jpush' do
+pod 'JPush'
+end
