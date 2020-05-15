@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<!--终端生成mapper dao entity 的命令：mvn mybatis-generator:generate-->
+<generatorConfiguration>
+
+    <properties resource="mybatis/mybatisGeneratorInit.properties"></properties>
+    <context id="Mysql" defaultModelType="flat" targetRuntime="MyBatis3Simple">
+
+        <property name="beginningDelimiter" value="`"></property>
+        <property name="endingDelimiter" value="`"></property>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+
+            <!--自定义通用Mapper接口，将来所有生成的mapper接口都会继承这个接口-->
+            <property name="mappers" value="com.springboot.module.common.IMapper"></property>
+        </plugin>
+
+        <jdbcConnection driverClass="${jdbc_driver}" connectionURL="${jdbc_url}"
+                        userId="${jdbc_username}" password="${jdbc_password}"></jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.springboot.module.entity" targetProject="${project}">
+            <property name="enableSubPackages" value="false"></property>
+            <property name="trimStrings" value="true"></property>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mappers" targetProject="${resources}">
+            <property name="enableSubPackages" value="false"></property>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.springboot.module.mapper" targetProject="${project}">
+            <property name="enableSubPackages" value="false"></property>
+        </javaClientGenerator>
+
+        <table tableName="sys_user"
+               domainObjectName="User"
+               enableSelectByPrimaryKey="true" enableSelectByExample="true"
+               enableDeleteByExample="true" enableUpdateByExample="true"
+               enableCountByExample="true" enableDeleteByPrimaryKey="true"
+               enableInsert="true" enableUpdateByPrimaryKey="true">
+            <generatedKey column="uid" sqlStatement="Mysql" identity="true"></generatedKey>
+        </table>
+
+    </context>
+</generatorConfiguration>

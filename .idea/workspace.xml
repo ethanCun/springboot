@@ -19,28 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c4d0c72-5cae-456d-89c6-452ceb206197" name="Default" comment="add">
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/classpath:aop.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/java/com/example/demoaoplog/Aspect/WebLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/java/com/example/demoaoplog/DemoAopLogApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/java/com/example/demoaoplog/config/RepeatedlyReadFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/java/com/example/demoaoplog/config/RequestWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/java/com/example/demoaoplog/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/java/com/example/demoaoplog/controller/Controller1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/java/com/example/demoaoplog/controller2/Controller2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/java/com/example/demoaoplog/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-aop-log/src/test/java/com/example/demoaoplog/DemoAopLogApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5c4d0c72-5cae-456d-89c6-452ceb206197" name="Default" comment="@Slf4j+tomcat自定义日志输出格式" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +88,7 @@
       <workItem from="1568959540003" duration="9000" />
       <workItem from="1569025020088" duration="36000" />
       <workItem from="1588836178628" duration="117000" />
-      <workItem from="1589426365274" duration="524000" />
+      <workItem from="1589426365274" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1588836264864</created>
@@ -118,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588836264864</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="@Slf4j+tomcat自定义日志输出格式">
+      <created>1589427227454</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589427227454</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,12 +125,13 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <MESSAGE value="@Slf4j+tomcat自定义日志输出格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="@Slf4j+tomcat自定义日志输出格式" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="190" key="Vcs.Push.Dialog.v2" timestamp="1588836278278">
+    <state x="460" y="190" key="Vcs.Push.Dialog.v2" timestamp="1589427242189">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state x="460" y="190" key="Vcs.Push.Dialog.v2/0.23.1920.977@0.23.1920.977" timestamp="1588836278278" />
+    <state x="460" y="190" key="Vcs.Push.Dialog.v2/0.23.1920.977@0.23.1920.977" timestamp="1589427242189" />
   </component>
 </project>
